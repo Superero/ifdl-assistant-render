@@ -1,0 +1,123 @@
+id: "module_m125_psychologie_travail"
+nom: "Psychologie du travail des organisations (M125)"
+icone: "🧠"
+semestre: "S3"
+volume_horaire: "50h (CM:20h / TD:10h / TP:8h / Travail personnel:8h / Évaluation:4h)"
+responsable: "M. Mourad RHAFOUL"
+contact: "mourad.rhafoul1@gmail.com"
+
+objectif_general: |
+  Fournir aux étudiants du Master IFDL une compréhension approfondie des mécanismes psychologiques individuels et collectifs dans les organisations, afin d'analyser les comportements, accompagner le changement et concevoir des dispositifs de formation adaptés.
+
+objectifs_specifiques: |
+  - Connaître et distinguer les grandes théories et approches de la PTO (approche classique, humaniste, systémique, cognitive).
+  - Analyser les attitudes envers le travail (implication, satisfaction, engagement) et l'identité sociale dans les organisations.
+  - Appliquer les théories de la motivation (Maslow, Herzberg, Vroom, Deci & Ryan) dans un contexte de formation et de management.
+  - Analyser les processus de leadership, d'autorité et de pouvoir dans les organisations et évaluer leurs effets.
+  - Analyser le climat et la culture organisationnelle et les processus de changement à l'aide d'outils de diagnostic.
+  - Concevoir des dispositifs de formation et des plans d'accompagnement mobilisant les apports de la psychologie des organisations.
+
+chapitres: |
+  Séquence 1 : Les grandes approches théoriques et modèles explicatifs de la PTO
+  - Introduction aux définitions, à l'historique et aux méthodologies.
+  - Étude du taylorisme à l'approche cognitive en abordant les grands auteurs (Taylor, Ford, Fayol, Mayo, Maslow, McGregor, Von Bertalanffy, Trist & Emery).
+  
+  Séquence 2 : L'individu dans l'organisation  attitudes, implication, satisfaction et engagement
+  - Analyse des comportements individuels et de leur impact sur le fonctionnement des groupes et des organisations.
+  
+  Séquence 3 : Identité sociale dans les organisations
+  - Étude des mécanismes d'appartenance et de l'identité sociale en milieu professionnel.
+  
+  Séquence 4 : La motivation dans les organisations théories et applications
+  - Exploration des théories de la motivation et de leurs applications pratiques pour la conception d'environnements de travail stimulants.
+  
+  Séquence 5 : Le leadership — styles, compétences et dynamiques d'équipe
+  - Analyse des processus organisationnels liés à la gestion des équipes et aux styles de leadership.
+  
+  Séquence 6 : L'autorité et le pouvoir dans les organisations
+  - Compréhension de l'autorité, des relations sociales et des hiérarchies au sein des structures.
+  
+  Séquence 7 : Climat et culture organisationnelle
+  - Découverte des facteurs culturels intervenant dans le comportement des individus et des outils de diagnostic du climat social.
+  
+  Séquence 8 : Changement et développement organisationnel
+  - Définition du changement organisationnel.
+  - Analyse approfondie du modèle de Lewin (dégel/mouvement/regel) et des 8 étapes de Kotter. 
+  - Identification des sources de résistance et mise en place de stratégies d'accompagnement. 
+  - Utilisation du modèle ADKAR et conception de plans d'accompagnement incluant la formation comme levier stratégique.
+
+Seances: |
+  SÉANCE 1 : Introduction générale à la psychologie du travail et des organisations
+  - Définition : Étude des comportements humains dans le contexte professionnel et analyse des interactions entre l'individu et son environnement de travail (Claude Lemoine).
+  - Évolution historique : De la vision du travail comme contrainte (étymologie "tripalium") à son rôle de vecteur d'accomplissement et d'identité.
+  - Objectifs de la discipline : Améliorer la qualité de vie au travail, augmenter l'efficacité, soutenir le développement professionnel et prévenir les risques psychosociaux.
+  
+  SÉANCE 2 : Les grandes approches théoriques et modèles explicatifs
+  - Approches classiques : Le Taylorisme et l'Organisation Scientifique du Travail (optimisation mécanique), l'administration moderne de Fayol, et la bureaucratie de Weber.
+  - L'École des relations humaines : Elton Mayo et les expériences de Hawthorne (importance du climat social, de la reconnaissance et des interactions interpersonnelles).
+  - Approches contemporaines : Théories de la contingence (Lawrence & Lorsch) et approches systémiques considérant l'organisation comme un système ouvert.
+
+  SÉANCE 3 : L’individu dans l’organisation (attitudes, implication, satisfaction, engagement)
+  - Satisfaction au travail : État émotionnel lié à l'évaluation positive du travail (Locke, Ripon). Influencée par des facteurs matériels, sociaux et intrinsèques.
+  - Implication organisationnelle (Meyer & Allen) : Peut être affective (attachement émotionnel), normative (obligation morale) ou calculée (coûts de départ).
+  - Engagement : Dimension énergétique et dynamique (vigueur, dévouement, absorption).
+  - Enjeux : Une attitude positive favorise la performance durable, la créativité et la santé psychologique, tout en réduisant le turnover et l'absentéisme.
+
+  SÉANCE 4 : Identité sociale dans les organisations
+  - Fondements : L'identité sociale (Tajfel & Turner) résulte de l'appartenance à des groupes sociaux, impliquant des processus de catégorisation et de comparaison.
+  - Formes d'identité : Identité organisationnelle (caractéristiques centrales de l'entreprise partagées par les membres), identité professionnelle (savoirs et valeurs d'un métier), identité individuelle.
+  - Enjeux managériaux : Construire une culture inclusive, gérer la diversité et favoriser un sentiment d'appartenance pour stimuler la motivation intrinsèque.
+
+  SÉANCE 5 : La motivation dans les organisations : théories et applications
+  - Motivation intrinsèque vs extrinsèque : L'équilibre nécessaire entre le sens de l'activité elle-même et les récompenses externes.
+  - Théories des besoins : Hiérarchie de Maslow, théorie ERG d'Alderfer, et théorie bifactorielle de Herzberg (facteurs d'hygiène vs facteurs motivateurs).
+  - Théories cognitives : Théorie des attentes VIE de Vroom (Valence, Instrumentalité, Expectation) et Théorie de l'équité d'Adams (comparaison contribution/rétribution).
+  - Théories contemporaines : Autodétermination (Deci & Ryan : autonomie, compétence, appartenance) et fixation des objectifs (Locke & Latham).
+
+  SÉANCE 6 : Le leadership dans les organisations : styles, compétences et dynamiques d’équipe
+  - Définition : Processus d'influence visant à orienter une organisation vers une vision souhaitable en mobilisant les acteurs.
+  - Approches : Par les traits de personnalité, comportementale (Lewin, Likert), et situationnelle/contingente (Fiedler, Hersey & Blanchard).
+  - Styles de leadership : Autoritaire, démocratique/participatif, laisser-faire. Évolution vers le leadership transformationnel (inspirant et innovant) et transactionnel (échanges et récompenses).
+
+  SÉANCE 7 : L’autorité et le pouvoir dans les organisations
+  - Définitions : L'autorité est le droit reconnu et légitime d'ordonner ; le pouvoir est la capacité d'influencer ou de contraindre (Darbelet).
+  - Typologie de Weber : Autorité traditionnelle, charismatique et rationnelle-légale.
+  - Analyse stratégique (Crozier) : Le pouvoir circule et se construit par la maîtrise des "zones d'incertitude" (expertise, information).
+  - Enjeux : L'autorité contemporaine doit combiner légitimité hiérarchique et autorité personnelle (compétence, exemplarité, confiance) pour faciliter la coopération.
+
+  SÉANCE 8 : Climat et culture organisationnelle
+  - Climat organisationnel (Litwin & Stringer) : Perception partagée par les membres de leur environnement (structure, responsabilité, soutien, récompenses).
+  - Culture organisationnelle (Schein) : Système profond de croyances et valeurs. Comprend 3 niveaux : Artefacts (visibles), Valeurs défendues, et Postulats fondamentaux (inconscients).
+  - Interaction : La culture est le socle symbolique ; le climat en est l'expression vécue. Ils influencent conjointement la performance, l'innovation et la résilience de l'organisation.
+
+  SÉANCE 9 : Changement et développement organisationnel
+  - Changement organisationnel : Peut être incrémental (progressif), radical (transformation profonde) ou culturel. Nécessite de surmonter les résistances individuelles et collectives.
+  - Développement Organisationnel (DO) : Démarche planifiée à long terme (Beckhard) visant l'amélioration continue et la santé de l'organisation via les sciences du comportement.
+  - Méthodes : Formation, coaching, team building. Objectif : transformer l'organisation en un système apprenant et agile face aux enjeux contemporains (digitalisation, RSE, etc.).
+
+evaluation: |
+  - Examen final de fin de semestre : coefficient 2/4.
+  - Contrôle continu (test, épreuve orale, devoir, exposé) : coefficient 1/4.
+  - Travaux pratiques (quiz sommatifs, études de cas, projet intégrateur S8) : coefficient 1/4.
+  - Modalités de validation : La note finale du module doit être supérieure ou égale à 10/20.
+
+ressources: |
+  - Bobillier-Chaumon, M. E., & Sarnin, P. (2012). Manuel de psychologie du travail et des organisations. De Boeck.
+  - Sarnin, P. (2016). Psychologie du travail et des organisations. De Boeck Superieur.
+  - Louche, C. (2018). Introduction à la psychologie du travail et des organisations: Concepts de base et applications. Dunod.
+  - Rouleau, L. (2011). Théories des organisations: approches classiques, contemporaines et de l'avant-garde. Puq.
+  - Références théoriques clés abordées : Maslow (1943), Herzberg (1959), Vroom (1964), Deci & Ryan (1985), Tajfel & Turner (1979), Bass (1985), French & Raven (1959), Schein (1985), Lewin (1951), Kotter (1996).
+  - Lévy-Leboyer, C. (1987). Traité de psychologie du travail. Eyrolles.
+  - Louche, C. & Pansu, P. (2019). Introduction à la psychologie du travail et des organisations. Dunod.
+  - Éric Gosselin (2007). Aspects humains des organisations : psychologie du travail et comportement organisationnel. Chenelière Education.
+  - Jean-Jacques Bourque et François Lelord (1999). L’Ame de l’organisation. Editions Québec Amérique.
+  - Daniel Mercure et Jan Spurk (2019). Les Théories du travail. P.U.L.
+
+conseils: |
+  - Prévoyez 3h à 4h de travail personnel par semaine pour la consultation des ressources (vidéo, PDF, podcast) et la réalisation des activités (quiz, forum, devoirs).
+  - Le module alterne cours magistraux et Travaux Dirigés (TD). Une participation active lors des TD est essentielle pour relier les concepts théoriques à la pratique managériale.
+  - Analysez votre propre expérience (stages, projets) à la lumière des théories (motivation, identité, climat) pour mieux préparer l'étude de cas finale.
+  - Portez une attention particulière à la distinction entre concepts proches (ex: implication vs engagement, pouvoir vs autorité, climat vs culture).
+  - Participez activement aux études de cas et aux jeux de rôle pour faire le lien entre les théories psychologiques et des situations professionnelles concrètes.
+  - Impliquez-vous dans les forums hebdomadaires : un argumentaire structuré et commenté permet d'enrichir la réflexion collective.
+  - La tenue d'un journal de bord ou portfolio tout au long du semestre est recommandée pour développer votre capacité d'auto-analyse et relier la matière à votre projet en ingénierie de formation.

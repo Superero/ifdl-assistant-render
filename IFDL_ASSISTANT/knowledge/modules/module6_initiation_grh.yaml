@@ -1,0 +1,64 @@
+id: "module_m114_initiation_grh"
+nom: "Initiation à la Gestion des Ressources Humaines (M114)"
+icone: "👥"
+semestre: "S1"
+credits_ects: 5
+volume_horaire: "50h (Cours: 30h / TD: 10h / TP: 6h / Évaluation: 4h)"
+responsable: "M. Mourad GHAFOUL"
+contact: "mourad.rhafoul1@gmail.com"
+
+objectif_general: |
+  Initier les étudiants aux fondamentaux de la Gestion des Ressources Humaines (GRH), en leur permettant de comprendre ses enjeux stratégiques et de maîtriser les processus opérationnels clés. Le module vise à outiller les futurs professionnels pour recruter, former, rémunérer et gérer les dynamiques sociales au sein d'une organisation moderne, tout en tenant compte de la digitalisation de la fonction RH.
+
+objectifs_specifiques: |
+  - Comprendre l'évolution de la GRH et son rôle stratégique dans le développement du capital humain et l'accompagnement de la stratégie globale de l'entreprise.
+  - Décrire, structurer et piloter un processus de recrutement complet, de l'identification du besoin jusqu'à l'intégration (onboarding).
+  - Concevoir et superviser les principales étapes de l'ingénierie de la formation et de l'évaluation des apprentissages.
+  - Connaître et utiliser les éléments constitutifs de la rémunération globale (salaire de base, primes, avantages matériels et immatériels).
+  - Superviser les opérations relatives à la masse salariale et analyser ses effets financiers sur l'organisation.
+  - Identifier les sources de tensions professionnelles et appliquer des stratégies efficaces pour gérer et résoudre les conflits.
+
+chapitres: |
+  CHAPITRE 1 : Rôle stratégique de la GRH
+  - Définition et évolution : De l'administration du personnel à la gestion stratégique des ressources humaines.
+  - Mission de la fonction RH : Alignement des ressources humaines avec les objectifs globaux de l'organisation, développement des compétences et fidélisation.
+  - Enjeux contemporains : Transformation digitale (SIRH, automatisation), marque employeur, Responsabilité Sociétale des Entreprises (RSE), et gestion des talents face aux nouvelles attentes (générations Y et Z).
+  
+  CHAPITRE 2 : Recrutement : Processus et outils
+  - Identification des besoins : Analyse du travail, élaboration de la fiche de poste et définition précise du profil idéal (savoir, savoir-faire, savoir-être).
+  - Le sourcing : Stratégies de recherche de candidats, méthodes classiques (cabinets, annonces) et approches modernes (e-recrutement, LinkedIn, cooptation).
+  - Processus de Sélection : Tri et analyse des CV, techniques d'entretien (structurés, situationnels), tests psychotechniques et mises en situation professionnelle (assessment centers).
+  - Accueil et intégration : L'importance de l'onboarding pour sécuriser le recrutement, programmes de parrainage et suivi pendant la période d'essai.
+  
+  CHAPITRE 3 : Formation et développement des compétences
+  - Identification des besoins en formation : Recueil des besoins via les entretiens annuels d'évaluation, les projets de l'entreprise et l'évolution des métiers (ex: transition numérique).
+  - Plan de formation : Conception du plan, ingénierie pédagogique, budgétisation, et choix des modalités (présentiel, e-learning, blended learning).
+  - Évaluation de la formation : Modèle de Kirkpatrick (réaction, apprentissage, comportement, résultats) et impact sur la performance individuelle et organisationnelle.
+  
+  CHAPITRE 4 : Les éléments de la rémunération
+  - Salaire de base : Fixation des salaires, notion de grille salariale, principe d'équité interne et de compétitivité externe.
+  - Primes et variables : Rémunération de la performance individuelle et collective (intéressement, participation).
+  - Avantages et indemnités : Rémunération indirecte, avantages en nature, et équilibre vie professionnelle / vie personnelle.
+  - La masse salariale : Définition, pilotage, outils de prévision (effet de noria, GVT) et ses impacts sur l'équilibre financier de l'organisation.
+  
+  CHAPITRE 5 : Gestion des conflits et climat social
+  - Définition et types : Conflits interpersonnels, intragroupes et intergroupes.
+  - Sources des conflits : Problèmes de communication, rareté des ressources, ambiguïté des rôles, chocs de valeurs.
+  - Stratégies de gestion des conflits : Matrice de Thomas-Kilmann (évitement, accommodation, compromis, compétition, collaboration), techniques de médiation et de négociation.
+  - Cas pratiques : Analyse de situations conflictuelles réelles, jeux de rôle et propositions de plans de résolution pour restaurer un climat social sain.
+
+evaluation: |
+  - Examen de fin de semestre : coefficient 1/2. Évaluation des connaissances théoriques et de l'aptitude à résoudre un problème RH global.
+  - Contrôle continu : coefficient 1/4. Inclut des tests écrits, des épreuves orales, des devoirs et des exposés.
+  - Travaux pratiques (TP) et Activités Pratiques : coefficient 1/4. Évaluation basée sur l'application concrète des concepts (jeux de rôle de recrutement, ingénierie de formation).
+  - Modalité : L'étudiant est amené à produire un travail personnel (individuel ou en binôme) nécessitant la remise d'un rapport écrit et une présentation orale.
+
+ressources: |
+  - Organisation des enseignements : Mode hybride avec 70% des heures en présentiel (35h) et 30% à distance (15h).
+  - Méthodologie : Cours magistraux, travaux personnels, ateliers collaboratifs et études de cas réels.
+  - Modalités à distance : Sessions de cours en ligne synchrones via des plateformes de visioconférence pour garantir l'interaction directe avec l'enseignant.
+
+conseils: |
+  - Impliquez-vous activement dans les "Cas pratiques" du Chapitre 5 (Gestion des conflits) et lors des simulations d'entretiens. Ces soft skills sont cruciaux pour votre futur métier.
+  - Pour le travail personnel, choisissez rapidement votre binôme et une thématique RH d'actualité (ex: l'impact de l'IA sur le recrutement ou le e-learning dans la formation) pour produire un rapport analytique solide.
+  - Profitez des sessions synchrones à distance pour poser des questions sur les aspects techniques, comme le calcul de la masse salariale ou l'élaboration du plan de formation.

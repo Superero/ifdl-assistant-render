@@ -1,0 +1,310 @@
+# ============================================================
+#  FICHIER DE CONFIGURATION — MASTER IFDL
+#  📝 Éditez ce fichier pour personnaliser les informations
+#     générales du Master. Le système IA s'appuiera sur ces
+#     données pour répondre aux étudiants.
+#
+#  FORMAT : YAML simplifié — texte libre entre les balises
+#  RECHARGEMENT : redémarrez le serveur (node server.js)
+#                 après chaque modification.
+# ============================================================
+
+nom: "Master Ingénierie de la Formation et Digital Learning (IFDL)"
+sigle: "Master IFDL"
+etablissement: "École Supérieure de l'Éducation et de la Formation (ESEF) - Berrechid, Université Hassan 1er"     
+ville: "Berrechid"
+niveau: "Bac+5 (Master 2)"
+duree: "2 ans (M1 + M2)"
+modalite: "Hybride (présentiel + distanciel via Moodle)"
+langue: "Français"
+
+# ── DESCRIPTION GÉNÉRALE ──────────────────────────────────
+description: |
+  Le Master IFDL forme des experts en ingénierie de la formation capable de
+  concevoir, piloter et évaluer des dispositifs de formation innovants,
+  notamment à l'ère du numérique et de l'intelligence artificielle.
+  Il articule sciences de l'éducation, technologies numériques et management
+  de la formation pour préparer des professionnels polyvalents et opérationnels.
+  Les étudiants apprendront à utiliser les dernières technologies pour créer des environnements d’apprentissage en ligne efficaces et engageants, ainsi qu’à mettre en œuvre des stratégies de formation pour améliorer les résultats des employés et des organisations.
+
+# ── OBJECTIFS PÉDAGOGIQUES ────────────────────────────────
+objectifs: |
+  La formation proposée a pour objectifs de :
+  - Former des Chefs de projet formation et en digital Learning, des concepteurs pédagogiques, des responsables qualités dans le secteur de l'éducation et de la formation afin de répondre au besoin criant du marché du travail.
+  - Préparer à une activité d'ingénieur en formation, capable d'aborder des problèmes plus généraux que ceux posés par les besoins de l'enseignement et de la formation.
+  - Former des consultants en formation dans des organismes privés ou publics, des responsables de formation dans le cadre de la gestion des ressources humaines, spécialiste en ingénierie de la formation et développement des compétences, chargés d'études et de mission, intervenants en formation.
+  - Promouvoir la qualité de l'éducation et de la formation.
+  - Initier aux théories et méthodes de recherches en didactique et en pédagogie.
+  - Créer un projet personnel.
+  1. Maîtriser les fondements théoriques des sciences de l'éducation et des
+     théories de l'apprentissage.
+  2. Concevoir des dispositifs de formation hybrides et numériques (e-learning,
+     blended learning, MOOC, micro-learning).
+  3. Piloter des projets de transformation digitale dans les organisations.
+  4. Utiliser les technologies éducatives (LMS, outils auteurs, IA) de manière
+     pédagogiquement fondée.
+  5. Développer une posture de chercheur-praticien en ingénierie pédagogique.
+  6. Conduire des évaluations de la formation et analyser les données
+     d'apprentissage (Learning Analytics).
+
+# ── PUBLIC CIBLE ──────────────────────────────────────────
+public_cible: |
+  Le Master est ouvert aux étudiants titulaires d'une Licence des filières de l'éducation et toute filière scientifique, technique, gestion et économie ou ayant un diplôme jugé équivalent.
+  - Professionnels des RH et de la formation souhaitant se spécialiser dans
+    le digital learning.
+  - Enseignants et formateurs souhaitant moderniser leurs pratiques.
+  - Chefs de projets e-learning et ingénieurs pédagogiques.
+  - Toute personne souhaitant travailler dans l'EdTech.
+  - Conditions d'admission : diplôme Bac+3/4 en sciences humaines, éducation,
+    informatique, communication ou domaine connexe + entretien de motivation.
+
+# ── STRUCTURE DU PROGRAMME ────────────────────────────────
+structure: |
+  Le programme est structuré sur 4 semestres couvrant à la fois les sciences de l'éducation, les technologies numériques et les compétences en management :
+  
+  Semestre 1 (M1):
+  - M1. Ingénierie didactique
+  - M2. Ingénierie pédagogique
+  - M3. Sciences de l'éducation
+  - M4. Initiation à la Gestion des Ressources Humaines
+  - M5. Programmation Linéaire et Statistiques Descriptives
+  - M6. Soft Skills
+  - M7. Langues Etrangères (Français /Anglais)
+  
+  Semestre 2 (M1):
+  - M8. Ingénierie de la formation et des compétences
+  - M9. Digital Learning 1
+  - M10. Principes, méthodes et technologies de l'évaluation
+  - M11. Développement Web
+  - M12. Méthodes scientifiques et documentaires et traitement de l'information
+  - M13. Culture digitale
+  - M14. Langues Etrangères (Français /Anglais)
+  
+  Semestre 3 (M2):
+  - M15. Digital Learning avancé
+  - M16. Intelligence artificielle pour l'enseignement et l'apprentissage
+  - M17. La Qualité du système d'éducation et formation
+  - M18. Ingénierie et gestion de projets
+  - M19. Programmation Orientée Objet
+  - M20. Culture and Art skills
+  - M21. Langues Etrangères (Français /Anglais)
+  
+  Semestre 4 (M2):
+  - M22. Employment Skills
+  - Projet de fin d'études
+
+# ── ORGANISATION PRATIQUE ─────────────────────────────────
+organisation_pratique: |
+  Les enseignements se déroulent à l'ESEF Berrechid et combinent des approches théoriques, techniques (programmation, IA, web) et de la gestion de projet. La formation s'appuie fortement sur l'utilisation des environnements numériques et des outils technologiques actuels.
+  - Plateforme : Moodle (accès 24h/24, 7j/7)
+  - Sessions en présentiel : 2 à 3 fois par semestre (selon planning)
+  - Travail en groupes collaboratifs en ligne
+  - Charge de travail estimée : 15 à 20h/semaine (formation continue)
+  - Évaluations : devoirs à rendre, exposés, QCM en ligne, mémoire final
+  - Tutorat : chaque étudiant dispose d'un tuteur pédagogique référent
+
+# ── ÉQUIPE PÉDAGOGIQUE ────────────────────────────────────
+equipe: |
+  L'équipe pédagogique est composée d'enseignants-chercheurs et de
+  professionnels experts en exercice dans les domaines de la formation,
+  du numérique et du management. Les intervenants extérieurs apportent
+  une dimension terrain et professionnalisante.
+  Coordonnatrice du Master : Pr Soumia TAMANI
+  E-mail de contact : soumia.tamani@uhp.ac.ma
+
+# ── INSCRIPTION ET ACCÈS ──────────────────────────────────
+inscription: |
+
+  DÉMARCHES D'INSCRIPTION :
+  1. Dépôt du dossier en ligne : CV, lettre de motivation, diplômes,
+     relevés de notes, projet professionnel.
+  2. Entretien de sélection (présentiel ou visio) : présentation du projet,
+     motivation, disponibilité.
+  3. Notification d'admission et signature de la convention de formation.
+  4. Règlement des droits de scolarité (possibilité de prise en charge OPCO,
+     CPF, ou employeur selon les cas).
+  5. Activation du compte étudiant et accès Moodle (identifiants envoyés
+     par email — vérifiez vos spams).
+
+  PREMIER ACCÈS À MOODLE :
+  1. Connectez-vous sur l'URL fournie dans l'email d'accueil.
+  2. Utilisez les identifiants reçus et changez le mot de passe immédiatement.
+  3. Complétez votre profil (photo, bio, ville, préférences de notification).
+  4. Explorez le tableau de bord : vos cours apparaissent dans "Mes cours".
+  5. Lisez le "Guide de démarrage" dans l'espace d'accueil.
+  6. Présentez-vous dans le forum d'accueil de votre promotion.
+  7. Téléchargez l'application Moodle Mobile (iOS / Android).
+
+# ── ORGANISATION DU TRAVAIL ───────────────────────────────
+organisation_travail: |
+  Pour réussir dans ce Master, il est recommandé de développer une forte autonomie dans la prise en main des outils numériques, de s'investir activement dans les projets de groupe et d'effectuer une veille constante sur l'évolution des technologies éducatives et de l'intelligence artificielle.
+
+  GESTION DU TEMPS :
+  - Prévoir 15 à 20h/semaine pour un étudiant en formation continue.
+  - Bloquer des créneaux fixes dans l'agenda (soirs, week-ends).
+  - Utiliser le calendrier Moodle pour noter tous les rendus dès le début
+    du semestre.
+  - Commencer tout devoir au moins 2 semaines avant la date limite.
+
+  MÉTHODES D'ÉTUDE EFFICACES :
+  - Méthode Pomodoro : 25 min de travail / 5 min de pause.
+  - Cartes mentales (mind maps) pour synthétiser chaque cours.
+  - Enseignement par les pairs : expliquer à un collègue = maîtriser.
+  - Journaux réflexifs : noter ses apprentissages au fil de la formation.
+  - Connecter chaque notion à sa pratique professionnelle réelle.
+
+  OUTILS RECOMMANDÉS :
+  - Organisation : Notion, OneNote, Trello.
+  - Bibliographie : Zotero (pour le mémoire).
+  - Communication groupe : WhatsApp, Discord, Teams.
+  - Vidéoconférence : Zoom, BigBlueButton (intégré Moodle).
+
+# ── DÉBOUCHÉS PROFESSIONNELS ──────────────────────────────
+debouches: |
+  À l'issue de la formation, les diplômés peuvent prétendre aux postes de :
+  - Chef de projet formation et digital learning
+  - Concepteur pédagogique
+  - Responsable qualité dans le secteur de l'éducation
+  - Ingénieur en formation
+  - Consultant en formation (organismes privés ou publics)
+  - Responsable de formation (DRH)
+  - Spécialiste en développement des compétences
+
+  MÉTIERS PRINCIPAUX :
+  1. Ingénieur(e) pédagogique / Instructional Designer
+    - Conçoit des formations e-learning (scénarios, storyboards, contenus interactifs)
+    - Secteurs : entreprises, organismes de formation, EdTech
+  2. Chef(fe) de projet formation digitale
+    - Pilote les projets de digitalisation de la formation
+    - Coordonne les équipes (formateurs, développeurs, graphistes)
+    - Secteurs : grandes entreprises, cabinets conseil, OPCO
+  3. Responsable Formation / Learning & Development Manager
+    - Définit la stratégie de formation de l'organisation
+    - Gère le plan de développement des compétences
+    - Secteurs : RH, DRH de grandes entreprises
+  4. Consultant(e) en transformation digitale (formation)
+    - Accompagne les organisations dans leur transition vers le digital learning
+    - Travaille en cabinet de conseil ou en indépendant
+  5. Concepteur(trice) de MOOCs et contenus e-learning
+    - Plateformes en ligne (Coursera, edX, OpenClassrooms, FUN-MOOC)
+    - Universités et grandes écoles
+  6. Coordinateur(trice) pédagogique en ligne / E-learning Manager
+    - Gère et anime une communauté apprenante en ligne
+    - Tuteur/tutrice en ligne pour des formations certifiantes
+  7. Data analyst formation / Learning Analytics Specialist
+    - Analyse les données d'apprentissage pour améliorer l'efficacité des formations
+    - Secteur : EdTech, grandes entreprises avec un LMS
+  8. Chercheur(se) / Enseignant(e)-chercheur(se) en sciences de l'éducation (si poursuite doctorat)
+    - Poursuite en doctorat
+    - Postes en universités ou centres de recherche
+
+  SECTEURS PORTEURS :
+  - EdTech (marché mondial en forte croissance, +16%/an)
+  - Formation professionnelle continue
+  - Grandes entreprises avec LMS (CAC 40, ETI)
+  - Enseignement supérieur numérique
+  - Secteur public (administration, collectivités)
+  - International (UNESCO, OIF, organisations mondiales)
+
+  COMPÉTENCES LES PLUS VALORISÉES :
+  - Maîtrise LMS : Moodle, Canvas, 360Learning
+  - Outils auteurs : Articulate Storyline, Rise, iSpring
+  - Vidéo pédagogique : Camtasia, OBS, Loom
+  - IA pédagogique : ChatGPT, Synthesia, Quizgecko
+  - Gestion de projet : Agile, Scrum, Trello
+  - Analyse de données : Learning Analytics, Excel, Power BI
+
+# ── PROJET DE FIN D'ÉTUDES (PFE) ─────────────────────────
+pfe: |
+  Le Semestre 4 est principalement consacré au Projet de Fin d'Études (PFE). 
+  Il est l'équivalent de 6 modules disciplinaires et permet de mobiliser l'ensemble des compétences acquises (ingénierie, conception, gestion de projet, technopédagogie) au travers d'une réalisation concrète en milieu professionnel ou en recherche appliquée.
+  NATURE DU PFE :
+  Mémoire de recherche appliquée démontrant la capacité à identifier une
+  problématique professionnelle, mener une revue de littérature, collecter
+  et analyser des données, et proposer des recommandations argumentées.
+
+
+  STRUCTURE DU MÉMOIRE :
+  1. Page de titre, remerciements, résumé (FR + EN), mots-clés
+  2. Sommaire
+  3. Introduction (contexte, problématique, annonce du plan)
+  4. Revue de littérature et cadre théorique
+  5. Méthodologie de recherche
+  6. Présentation des résultats
+  7. Discussion et interprétation
+  8. Conclusion et recommandations
+  9. Bibliographie (norme APA 7e édition)
+  10. Annexes
+
+# Informations sur le Projet de Fin d'Études (PFE) et le rapport de stage
+pfe: |
+  GUIDE MÉTHODOLOGIQUE POUR LA RÉDACTION DU RAPPORT DE STAGE (PFE)
+  Ce guide, élaboré par le Pr. Jabran DAAIF (Coordinateur du module Digital Learning), définit la structure attendue pour le rapport de stage du Master IFDL.
+
+  1. CARACTÉRISTIQUES GÉNÉRALES
+  - Volume attendu : 100 à 120 pages pour le corps du texte (les annexes ne sont pas comptabilisées).
+  - Flexibilité : ±5 pages par partie en fonction de l'envergure du projet.
+  - Mise en forme : Police Times New Roman 12 ou Arial 11.
+  - Objectifs visés : Démontrer la capacité de l'étudiant à articuler théorie et pratique, valoriser la démarche d'ingénierie pédagogique, formuler une réflexion critique et documenter la conception d'un projet de digitalisation.
+
+  2. SECTIONS PRÉLIMINAIRES
+  - Page de garde : Elle doit inclure les logos (Université, établissement, organisme d'accueil), le nom de l'établissement, le nom du Master, un titre clair et précis reflétant le sujet, les informations du stagiaire, le jury (Président, Examinateur, Encadrants), et les dates du stage[cite: 17, 18, 19, 20, 21, 22, 23, 24, 28, 31, 39].
+  - Remerciements : Section brève d'une demi-page à une page maximum[cite: 53]. [cite_start]Remercier par ordre de priorité : chef d'établissement, coordinateur du Master, encadrants universitaires, encadrant professionnel, personnes-ressources et proches[cite: 54, 57, 58, 59, 60, 61, 62].
+  - Résumé : Longueur de 250 à 350 mots, structuré selon l'approche IMRAD (Introduction, Méthodologie, Résultats, Discussion), rédigé au passé et n'incluant aucune citation.
+  - Mots-clés : 5 à 7 termes (en français et anglais), ordonnés du plus général au plus spécifique.
+
+  3. INTRODUCTION GÉNÉRALE
+  - Volume de 3 à 5 pages, rédigée selon une structure en entonnoir (du général au particulier).
+  - Elle doit comporter : une accroche et contextualisation, la présentation de l'organisme, la problématique avec les questions de recherche, les objectifs du stage et l'annonce synthétique du plan.
+
+  4. PARTIE I : CADRE THÉORIQUE ET CONCEPTUEL
+  - Volume recommandé : 25 à 35 pages.
+  - Chapitre 1 (Contexte et problématique) : Analyse du contexte général/spécifique, définition de la problématique, déclinaison en 3 à 5 questions de recherche, présentation des objectifs (généraux et spécifiques) et des hypothèses.
+  - Chapitre 2 (Revue de littérature) : 10 à 15 pages démontrant la maîtrise des fondamentaux (e-learning, formation hybride, etc.) et des cadres théoriques (ex. modèle ADDIE, constructivisme, connectivisme, modèle d'évaluation de Kirkpatrick).
+  - Chapitres suivants : Permettent d'approfondir les dimensions propres au sujet (spécificités de la formation hybride, analyse des besoins, scénarisation pédagogique, onboarding).
+  - Normes : Respecter rigoureusement les normes APA 7e édition pour les citations.
+
+  5. PARTIE II : CADRE PRATIQUE ET EXPÉRIMENTAL
+  - Volume recommandé : 25 à 35 pages.
+  - Chapitre 1 (Présentation de l'organisme) : 4 à 6 pages décrivant l'historique, les missions, la structure, les enjeux de l'organisme et justifiant l'intervention.
+  - Chapitre 2 (Démarche méthodologique) : 8 à 12 pages décrivant le type de recherche (ex. recherche-action), le modèle pédagogique adapté (ADDIE + gestion de projet IT), l'échantillon, les instruments de collecte (questionnaires, entretiens, traces LMS) et les méthodes d'analyse[cite: 428, 437, 438, 490, 505, 549, 570]. [cite_start]Une attention particulière doit être portée aux considérations éthiques (consentement, anonymisation) et aux limites.
+  - Chapitre 3 (Résultats selon le modèle ADDIE) :
+    * Analyse : Évaluation des besoins, analyse du public cible et audit du contexte/environnement LMS.
+    * Design : Définition des objectifs SMART, architecture globale, scénarisation, sélection des outils technologiques, ergonomie (UX) et stratégie d'accompagnement.
+    * Développement : Production des contenus, intégration SCORM/H5P sur la plateforme, création des guides de prise en main et réalisation des tests techniques.
+    * Implémentation : Paramétrage du lancement, suivi des indicateurs (taux de connexion/complétion) et actions d'animation communautaire.
+    * Évaluation : Mesure des apprentissages via pré/post-tests, évaluation de la satisfaction (Kirkpatrick 1), transfert des compétences (Kirkpatrick 3 si réalisable), impact organisationnel (Kirkpatrick 4) et méta-évaluation globale du dispositif.
+
+
+  EXEMPLES DE SUJETS :
+  - L'impact de la gamification sur l'engagement en e-learning
+  - Analyse des pratiques de tutorat à distance en dispositif hybride
+  - L'IA générative dans les pratiques des ingénieurs pédagogiques
+  - Évaluation de l'efficacité d'un MOOC en entreprise : étude de cas
+  - Learning analytics pour réduire le décrochage en formation à distance
+
+  NORMES : 80 à 120 pages hors annexes — Norme APA 7e édition.
+
+  SOUTENANCE : 20-30 min de présentation + 20-30 min de questions du jury.
+
+# Moodle 
+PREMIER ACCÈS À MOODLE :
+ Moodle est votre plateforme centrale. Voici les premières actions :
+   1. Connectez-vous à l'URL fournie par l'établissement  https://esef-moodle.uh1.ac.ma/login/index.php
+   2. Utilisez les identifiants reçus par email (vérifiez vos spams)
+   3. Changez votre mot de passe dès la première connexion
+   4. Complétez votre profil : photo, bio courte, préférences de notification
+   5. Explorez le tableau de bord : vos cours apparaissent dans "Mes cours"
+ NAVIGATION DANS MOODLE :
+   - Tableau de bord  vue d'ensemble de tous vos cours
+   - Calendrier  dates clés, rendus, examens
+   - Messages  communication avec les formateurs et collègues
+   - Forum du cours  espace de discussion principal
+   - Activités  devoirs, quiz, ressources, vidéos
+
+ CONSEILS POUR LES PREMIERS JOURS :
+   ✓ Lisez le guide de démarrage disponible dans l'espace d'accueil
+   ✓ Rejoignez le forum d'accueil et présentez-vous
+   ✓ Configurez les notifications Moodle (email/application)
+   ✓ Vérifiez les dates de tous les rendus dans le calendrier
+   ✓ Contactez votre coordinateur pédagogique si vous avez des difficultés d'accès

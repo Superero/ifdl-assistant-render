@@ -1,0 +1,129 @@
+# ============================================================
+#  MODULE 5 — IA pour l'enseignement et l'apprentissage
+# ============================================================
+
+id: "module_ia_education_m237"
+nom: "Intelligence artificielle pour l'enseignement et l'apprentissage"
+icone: "🤖"
+semestre: "S3"
+volume_horaire: "50h"
+responsable: "Pr. GOURAGUINE Soukaina"
+contact: "soukaina.gouraguine@uhp.ac.ma"
+
+objectif_general: |
+  Ce module vise à initier les étudiants à l'intégration de l'intelligence artificielle (IA) dans l'enseignement et l'apprentissage.
+  Il leur permettra de maîtriser les bases de l'IA et de l'apprentissage automatique, d'acquérir des compétences pratiques dans l'utilisation des outils et plateformes d'IA, de comprendre l'impact de cette technologie sur la pédagogie et les pratiques d'enseignement, et de développer un esprit critique face aux enjeux éthiques et sociaux de l'IA en éducation.
+
+objectifs_specifiques: |
+  - Identifier et expliquer les concepts fondamentaux de l'intelligence artificielle (définition, générations, histoire).
+  - Distinguer les différents types d'apprentissage automatique (supervisé, non supervisé, par renforcement) et décrire les algorithmes courants.
+  - Analyser comment l'IA transforme les méthodologies pédagogiques modernes et évaluer de manière critique les enjeux éthiques et les biais potentiels.
+  - Expérimenter et comparer les fonctionnalités des plateformes d'apprentissage adaptatives et des agents conversationnels.
+  - Concevoir des activités et des scénarios pédagogiques intégrant ces outils dans un dispositif hybride.
+  - Concevoir des scénarios pédagogiques intégrant des environnements immersifs (simulation numérique, Serious Games, réalité virtuelle et augmentée).
+  - Analyser l'évolution des rôles de l'enseignant et de l'apprenant dans un environnement intégrant l'IA, et modéliser des scénarios de cn homme-machine efficaces. [cite: 56]
+  - Évaluer l'impact de l'IA sur les résultats d'apprentissage, la motivation et l'engagement des apprenants.
+
+chapitres: |
+  SÉQUENCE 1 : INTRODUCTION À L'IA DANS L'ÉDUCATION
+  - Grain 1 : Définition et histoire de l'IA 
+     Définition de l'intelligence artificielle et appropriation de ses concepts fondamentaux.
+     Étude chronologique et analyse des différentes générations de l'IA.
+     Analyse historique de l'évolution de la place de l'IA au sein du domaine de l'éducation.
+  - Grain 2 : Principes et techniques d'apprentissage automatique 
+     Classification et typologies de l'apprentissage automatique : modes supervisé, non supervisé et par renforcement.
+     Étude des mécanismes de fonctionnement des algorithmes courants (SVM, KNN, réseaux de neurones profonds).
+     Identification et exploration des cas d'usage multisectoriels de l'apprentissage automatique.
+  - Grain 3 : Rôle de l'IA dans les méthodologies pédagogiques modernes
+     Processus de personnalisation des parcours et d'adaptation aux besoins d'apprentissage individuels.
+     Étude théorique de l'apprentissage adaptatif et conception des architectures de tutorat intelligent.
+     Émergence de nouvelles dynamiques pour l'apprentissage interactif, immersif et collaboratif.
+  - Grain 4 : Éthique et implications sociales de l'IA dans l'éducation 
+     Repérage des biais algorithmiques potentiels et cartographie des risques associés à l'IA en classe.
+     Analyse des enjeux de confidentialité, de gouvernance et de sécurisation des données d'apprentissage.
+     Étude de l'impact de l'IA sur les questions d'équité, d'inclusion et d'égalité des chances dans les parcours d'enseignement.
+     Valorisation des bonnes pratiques pour soutenir une utilisation responsable et éthique des outils technologiques.
+
+  SÉQUENCE 2 : OUTILS ET APPLICATIONS DE L'IA 
+  - Grain 1 : Plateformes d'apprentissage adaptatives
+     Caractérisation des fonctionnalités techniques et des bénéfices pédagogiques des plateformes adaptatives.
+     Analyse comparative d'environnements adaptatifs de référence (Khan Academy, DreamBox Learning).
+     Expérimentation concrète d'outils d'évaluation automatisée, de tests diagnostiques et de suivi individualisé.
+  - Grain 2 : Systèmes de tutorat intelligents et agents conversationnels
+     Positionnement des agents conversationnels (ex: ChatGPT) en tant qu'assistants pédagogiques ou tuteurs virtuels.
+     Pratique technique de la scénarisation d'intentions pédagogiques et configuration d'un chatbot via Dialogflow.
+     Principes fondamentaux de traitement automatique du langage naturel (NLP) appliqués à la révision et à l'apprentissage.
+     Méthodologie d'intégration et d'implémentation fonctionnelle d'un agent conversationnel sur la plateforme Moodle.
+  - Grain 3 : Outils d'évaluation automatisée et de feedback personnalisé
+     Classification et paramétrage des typologies d'évaluation automatisée (QCM intelligents, tests adaptatifs).
+     Modélisation et automatisation de feedbacks correctifs différenciés basés sur l'analyse des erreurs des apprenants.
+     Exploitation des outils numériques d'évaluation (Wayground, Google Forms, Kahoot) pour soutenir l'évaluation formative.
+  - Grain 4 : Simulation numérique, jeux éducatifs basés sur l'IA, Réalités virtuelle (RV) et augmentée (RA)
+     Scénarisation pédagogique et techniques d'intégration de simulations numériques immersives dans les curriculums.
+     Rôle des jeux éducatifs basés sur l'IA (Serious Games) pour stimuler la motivation et l'apprentissage actif.
+     Analyse de la personnalisation de la progression ludique : adaptation dynamique du niveau et feedback en temps réel.
+     Conception d'environnements interactifs et d'expériences apprenantes par l'exploration de mondes virtuels en RV/RA.
+  - Grain 5 : IA pour l'enseignement et l'apprentissage : cas des langues et des mathématiques
+     Analyse des outils d'apprentissage linguistique exploitant la traduction automatique et la reconnaissance vocale.
+     Étude de l'impact des systèmes de tutorat intelligents spécialisés pour l'apprentissage des mathématiques.
+     Alignement méthodologique des bibliothèques et logiciels d'IA avec les objectifs didactiques spécifiques.
+  - Grain 6 : Applications de l'IA pour l'inclusion et l'éducation spécialisée
+     Panorama des technologies d'assistance et d'adaptation pédagogique dédiées aux élèves à besoins spécifiques.
+     Manipulation d'outils d'accessibilité numérique : synthèse vocale, reconnaissance, sous-titrage automatique et lecture assistée.
+     Conception d'activités pédagogiques inclusives adaptées à des profils d'apprentissage ciblés.
+
+  SÉQUENCE 3 : IMPACT DE L'IA SUR LA PÉDAGOGIE
+  - Grain 1 : Évolution des pratiques d'enseignement et d'apprentissage
+     Restructuration fine de la posture professionnelle de l'enseignant et du rôle de l'apprenant.
+     Développement de nouvelles formes de collaboration pédagogique et renforcement de l'esprit critique.
+     Posture réflexive et analyse critique approfondie des dimensions humaines et sociopédagogiques de l'IA.
+  - Grain 2 : Collaboration homme-machine dans l'éducation
+     Modélisation et caractérisation de scénarios de collaboration homme-machine en situation d'apprentissage.
+     Répartition des tâches pédagogiques et définition des degrés d'autonomie accordés à la machine.
+     Rédaction d'un contrat pédagogique d'usage : délimitation des règles de transparence, usages autorisés et interdits.
+  - Grain 3 : Développement de nouvelles compétences et stratégies pédagogiques
+     Identification des compétences numériques et technopédagogiques indispensables à l'exploitation de l'IA en classe.
+     Formulation et déploiement de stratégies pédagogiques conçues pour maximiser l'efficience de l'IA.
+     Analyse des modèles d'ingénierie pour la formation continue et l'accompagnement des équipes enseignantes.
+  - Grain 4 : Amélioration des résultats d'apprentissage et de la motivation des apprenants
+     Mesure de la performance académique, de l'engagement cognitif et de l'évolution du sentiment de réussite.
+     Utilisation des technologies adaptatives personnalisées pour susciter la curiosité et l'envie d'apprendre.
+     Anticipation et gestion des risques psycho-pédagogiques : dépendance, désengagement et baisse de motivation.
+  - Grain 5 : Perspectives de recherche et d'innovation dans l'IA pour l'éducation
+     Veille prospective sur les innovations en éducation (Deep Learning, architectures convolutives, réseaux neuronaux).
+     Diagnostic des défis scientifiques, des opportunités d'innovation et des limites méthodologiques actuelles.
+     Positionnement des acteurs éducatifs en tant que leviers de la transformation écosystémique des systèmes d'apprentissage.
+
+evaluation: |
+  L'évaluation du module est répartie comme suit :
+  - Examen de fin de semestre : coefficient 1/2.
+  - Contrôle continu : coefficient 1/2.
+  - Tests écrits (QCM par grain) pour l'évaluation des connaissances théoriques.
+  - Travaux pratiques (TP1, TP2, TP3) axés sur l'analyse critique, la conception et l'évaluation d'un dispositif pédagogique intégrant l'IA.
+  - Mini-Projet collaboratif (Atelier Moodle) structuré en 4 phases : consignes et recherche, rédaction et soumission, évaluation par les pairs, puis discussion et finalisation.
+  - Participation active aux forums et activités collaboratives en ligne.
+  
+  - Note finale = (Examen × 2 + CC × 1 + TP × 1) / 4.
+  - Validation ≥ 10/20.
+
+ressources: |
+  Livres et Publications :
+  - Seldon, A. & Abidoye, O. (2018). The Fourth Education Revolution. University of Buckingham Press.
+  - Holmes, W., Bialik, M. & Fadel, C. (2019). Artificial Intelligence in Education. Center for Curriculum Redesign.
+  - Luckin, R. (2018). Machine Learning and Human Intelligence. UCL IoE Press.
+  - Popenici, S.A.D. & Kerr, S. (2017). Exploring the impact of artificial intelligence on teaching and learning in higher education. Research and Practice in Technology Enhanced Learning.
+  - Baker, R.S. & Inventado, P.S. (2014). Educational Data Mining and Learning Analytics. Springer.
+  
+  Sites et Ressources en Ligne :
+  - UNESCO — AI in Education : https://www.unesco.org/en/artificial-intelligence/education
+  - Google AI Education : https://ai.google/education
+  - MIT OpenCourseWare — Machine Learning : https://ocw.mit.edu
+  - Coursera — AI for Everyone (Andrew Ng) : https://www.coursera.org
+  - Plateformes : Khan Academy, DreamBox Learning, ChatGPT (OpenAI).
+
+conseils: |
+  - Prérequis essentiels : Assurez-vous de bien maîtriser les principes de l'ingénierie pédagogique, les différentes théories d'apprentissage (behaviorisme, cognitivisme, constructivisme, connectivisme), et les outils du Digital Learning (LMS, modèles ADDIE/SAM) avant de démarrer.
+  - Investissement régulier : Le module requiert un temps de travail estimé à 3 heures par semaine. 
+  - Planifiez votre temps pour visionner les capsules, lire les transcriptions et réaliser les QCM par grain.
+  - Activités pratiques : Portez une attention particulière au Mini-Projet sur Moodle. Le respect des délais est impératif, notamment pour garantir le bon déroulement de la phase 3 (évaluation par les pairs).
+  - Interaction continue : L'enseignement à distance implique une forte participation. Utilisez les "Forums Q&A" et les classes virtuelles pour échanger avec le professeur et vos camarades de classe sur les concepts complexes comme les réseaux neuronaux ou la collaboration homme-machine.

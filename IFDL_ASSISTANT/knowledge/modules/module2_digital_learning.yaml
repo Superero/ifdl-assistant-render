@@ -1,0 +1,205 @@
+# ============================================================
+#  MODULE 2 — DIGITAL LEARNING ET LMS
+#  📝 Complétez ce fichier avec le contenu réel de votre module.
+# ============================================================
+
+id: "digital_learning"
+nom: "Digital Learning et Systèmes de Gestion de l'Apprentissage"
+icone: "💻"
+semestre: "S1"
+credits_ects: 6
+volume_horaire: "45h (dont 12h présentiel)"
+responsable: "Pr JABRAN DAAIF"
+
+objectif_general: |
+  Comprendre l'écosystème du digital learning, maîtriser l'utilisation d'un
+  LMS (Moodle) et être capable de choisir les modalités numériques adaptées
+  à un besoin de formation.
+
+objectifs_specifiques: |
+  À l'issue de ce module, l'apprenant sera capable de :
+  1. Définir et distinguer les différentes modalités du digital learning.
+  2. Naviguer et utiliser efficacement la plateforme Moodle.
+  3. Identifier les standards e-learning (SCORM, xAPI) et leurs usages.
+  4. Choisir les outils numériques adaptés à un contexte de formation.
+  5. Analyser des indicateurs de Learning Analytics de base.
+
+chapitres: |
+  CHAPITRE 1 : PANORAMA DU DIGITAL LEARNING
+
+  1.1 Définition et évolution
+  Digital Learning : ensemble des modalités d'apprentissage mobilisant les
+  technologies numériques pour concevoir, diffuser, gérer des formations.
+  Évolution historique :
+  - Années 1990 : EAO (Enseignement Assisté par Ordinateur), CD-ROM.
+  - Années 2000 : E-learning 1.0 (HTML statique, LMS premiers).
+  - Années 2005-2010 : E-learning 2.0 (web participatif, forums, wikis).
+  - Années 2010-2020 : Mobile learning, MOOCs, gamification, classes inversées.
+  - Années 2020+ : IA adaptative, réalité augmentée/virtuelle, micro-learning,
+    IA générative.
+
+  1.2 Les modalités du digital learning
+  A. E-LEARNING ASYNCHRONE
+  L'apprenant accède aux contenus à son propre rythme, sans synchronisation.
+  Exemples : modules SCORM, vidéos, podcasts, quiz en ligne, PDF interactifs.
+  Avantages : flexibilité totale, scalabilité, coût faible par apprenant.
+  Inconvénients : isolement, risque de décrochage, faible interaction.
+
+  B. E-LEARNING SYNCHRONE
+  Cours en temps réel via outils de visioconférence.
+  Outils : Zoom, Microsoft Teams, BigBlueButton (intégré Moodle), Webex.
+  Avantages : interaction humaine, engagement fort, questions en direct.
+  Inconvénients : contrainte horaire, dépendance au réseau.
+
+  C. BLENDED LEARNING (hybride)
+  Combinaison présentiel + distanciel.
+  Modèle Flipped Classroom (Classe inversée) : contenu en ligne avant le cours
+  → activités pratiques et discussion en présentiel.
+  Efficacité prouvée : améliore la rétention et l'engagement.
+
+  D. MOOC (Massive Open Online Course)
+  Cours en ligne ouvert et massif.
+  Plateformes : Coursera, edX, FUN-MOOC, OpenClassrooms.
+  Enjeu : taux de complétion faible (5-15%) → problème d'engagement.
+  SPOC (Small Private Online Course) : version restreinte pour groupes limités.
+
+  E. MICRO-LEARNING
+  Unités d'apprentissage courtes (2-5 minutes maximum).
+  Aligné avec la courbe d'attention et la mémoire de travail.
+  Exemples : capsules vidéo, infographies, cartes flash, podcasts courts.
+
+  F. MOBILE LEARNING (m-learning)
+  Apprentissage via smartphone/tablette.
+  80% des apprenants professionnels utilisent leur mobile pour apprendre.
+  Exige : design responsive, contenus légers, micro-learning.
+
+  CHAPITRE 2 : MOODLE — LA PLATEFORME DU MASTER IFDL
+
+  2.1 Architecture et navigation
+  - Tableau de bord : vue d'ensemble de tous les cours inscrits.
+  - Mes cours : accès direct aux espaces de chaque module.
+  - Calendrier : toutes les dates de remise, examens, événements.
+  - Messages : communication directe avec formateurs et apprenants.
+  - Notifications : alertes sur les nouvelles activités.
+
+  2.2 Les activités Moodle
+  - Forum : espace de discussion asynchrone (souvent noté).
+  - Devoir : dépôt de fichiers ou de texte en ligne.
+  - Quiz : évaluation avec correction automatique.
+  - Wiki : création collaborative de documents.
+  - Glossaire : construction collective d'un lexique.
+  - Base de données : collecte collaborative d'informations structurées.
+  - Sondage et questionnaire : recueil d'opinions.
+  - Chat : discussion synchrone textuelle.
+  - Atelier : évaluation entre pairs (peer assessment).
+
+  2.3 Les ressources Moodle
+  - Fichier : PDF, vidéo, audio, images.
+  - Page : contenu HTML créé directement dans Moodle.
+  - URL : lien vers une ressource externe.
+  - Livre : contenu structuré en chapitres.
+  - Étiquette : texte ou image de mise en forme.
+
+  2.4 Fonctionnalités importantes pour l'étudiant
+  - Suivi de complétion : cochez vos activités terminées.
+  - H5P : activités interactives (vidéo interactive, quiz, présentation).
+  - BigBlueButton : classe virtuelle intégrée.
+  - Réglages de notification : paramétrez pour ne rien manquer.
+
+  CHAPITRE 3 : STANDARDS E-LEARNING
+
+  3.1 SCORM (Shareable Content Object Reference Model)
+  Standard de communication entre un contenu e-learning et un LMS.
+  - SCORM 1.2 : version la plus répandue, stable et compatible.
+  - SCORM 2004 : plus complet (4 éditions), interactions plus fines.
+  Ce qu'un module SCORM communique au LMS :
+  · Statut (completé, non démarré, en cours, réussi, échoué)
+  · Score de l'apprenant
+  · Temps passé
+  · Données de navigation
+
+  3.2 xAPI (Experience API / Tin Can API)
+  Plus flexible que SCORM : trace toutes les expériences d'apprentissage
+  (vidéo externe, simulation, lecture, activité en présentiel, etc.).
+  Format : "Acteur a [verbe] [objet] [résultat] [contexte]"
+  Exemple : "Alice a terminé la vidéo Introduction au Digital Learning
+  avec un score de 85/100 depuis son smartphone."
+  Nécessite un LRS (Learning Record Store) pour stocker les données.
+
+  3.3 CMI5
+  Standard hybride SCORM + xAPI. Recommandé pour tout nouveau projet.
+
+  CHAPITRE 4 : LEARNING ANALYTICS ET DONNÉES D'APPRENTISSAGE
+
+  4.1 Définition
+  Learning Analytics : collecte, mesure, analyse et rapport sur les données
+  des apprenants dans le but d'optimiser l'apprentissage et les dispositifs.
+
+  4.2 Indicateurs clés
+  - Taux de connexion et fréquence des visites.
+  - Taux de complétion des activités.
+  - Scores aux quiz et résultats aux devoirs.
+  - Temps passé sur chaque ressource.
+  - Patterns d'erreurs (questions ratées systématiquement).
+  - Taux de décrochage et facteurs prédictifs.
+  - Participation aux forums (quantité et qualité).
+
+  4.3 Utilisations pratiques
+  - Pour le formateur : identifier les apprenants en difficulté,
+    améliorer les contenus peu consultés, optimiser les évaluations.
+  - Pour l'apprenant : visualiser sa progression, identifier ses points
+    faibles, se comparer à la promotion (si disponible).
+  - Pour l'organisation : mesurer le ROI de la formation, piloter la
+    qualité des dispositifs.
+
+  CHAPITRE 5 : OUTILS ET RESSOURCES POUR LE DIGITAL LEARNING
+
+  5.1 Outils auteurs e-learning
+  - Articulate Storyline 360 : référence en entreprise, interactions avancées.
+  - Articulate Rise : rapide, responsive, idéal micro-learning.
+  - iSpring Suite : intégration PowerPoint, simple à prendre en main.
+  - Adobe Captivate : simulations logicielles, réalité augmentée.
+  - H5P : gratuit, intégrable dans Moodle, 40+ types d'activités.
+
+  5.2 Production vidéo pédagogique
+  - Captation : OBS Studio (gratuit), Camtasia, Loom.
+  - Montage : DaVinci Resolve (gratuit), Premiere Pro.
+  - Hébergement : Moodle direct, YouTube non répertorié, Vimeo, Peertube.
+
+  5.3 Outils IA pour la création de contenus
+  - ChatGPT / Claude : génération de textes pédagogiques.
+  - Quizgecko / QuestionWell : génération automatique de quiz.
+  - Synthesia / D-ID : vidéos avec avatars IA parlants.
+  - ElevenLabs / Murf AI : narration vocale synthétique.
+
+evaluation: |
+  - Analyse comparative de 2 LMS différents (tableau + rapport 2 pages)
+    → 30% — à rendre semaine 5.
+  - Création d'une activité H5P sur Moodle (au choix du type)
+    → 30% — à rendre semaine 9.
+  - QCM en ligne (30 questions, 45 min) sur l'ensemble du module
+    → 40% — semaine 12.
+
+ressources: |
+  OUVRAGES :
+  - Lebrun, M. (2011). Impacts des TIC sur la qualité des apprentissages
+    des étudiants. Sciences et Technologies de l'Information et de la
+    Communication pour l'Éducation et la Formation, 18.
+  - Docq, F., & Daele, A. (2003). De l'enseignement à l'apprentissage
+    en ligne. De Boeck.
+
+  EN LIGNE :
+  - Documentation officielle Moodle : docs.moodle.org/fr
+  - SCORM.com : ressources et tutoriels sur les standards.
+  - xAPI.com : documentation et exemples xAPI.
+  - eLearning Industry (elearningindustry.com) : articles et tendances.
+
+conseils: |
+  - Explorez Moodle en tant qu'apprenant ET en tant que futur concepteur :
+    notez ce qui fonctionne bien ou mal pédagogiquement.
+  - Commencez à utiliser H5P sur la plateforme dès la semaine 2 : c'est
+    l'outil le plus accessible pour créer des activités interactives.
+  - Suivez quelques MOOCs gratuits sur Coursera ou FUN-MOOC pour observer
+    les bonnes pratiques du digital learning par l'expérience.
+  - Créez-vous un compte sur openrouter.ai ou Quizgecko pour tester les
+    outils IA présentés dans le cours.

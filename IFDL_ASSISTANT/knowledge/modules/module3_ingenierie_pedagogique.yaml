@@ -1,0 +1,138 @@
+# ============================================================
+#  MODULE 3 — INGÉNIERIE PÉDAGOGIQUE
+# ============================================================
+
+id: "ingenierie_pedagogique"
+nom: "Ingénierie Pédagogique et Conception de Formation"
+icone: "🏗️"
+semestre: "S1"
+credits_ects: 6
+volume_horaire: "45h"
+responsable: "[Nom du responsable]"
+
+objectif_general: |
+  Maîtriser les démarches et outils de l'ingénierie pédagogique pour
+  concevoir des formations efficaces et adaptées aux besoins des apprenants.
+
+objectifs_specifiques: |
+  À l'issue de ce module, l'apprenant sera capable de :
+  1. Conduire une analyse des besoins de formation.
+  2. Concevoir un dispositif de formation selon le modèle ADDIE ou SAM.
+  3. Rédiger un storyboard pédagogique complet.
+  4. Choisir des stratégies pédagogiques adaptées aux objectifs et au public.
+  5. Planifier et concevoir un système d'évaluation des apprentissages.
+
+chapitres: |
+  CHAPITRE 1 : L'INGÉNIERIE PÉDAGOGIQUE — FONDEMENTS
+
+  1.1 Définition et positionnement
+  L'ingénierie pédagogique est une démarche systématique, rigoureuse et
+  empirique appliquée à la conception, au développement, à la mise en
+  œuvre et à l'évaluation de l'instruction et de la formation.
+  L'ingénieur pédagogique : chef d'orchestre entre les experts du contenu,
+  les apprenants, les commanditaires et les équipes techniques.
+
+  CHAPITRE 2 : LE MODÈLE ADDIE
+
+  A — ANALYSE :
+  Objectif : comprendre le problème de performance et les besoins.
+  • Analyse des besoins : gap entre situation actuelle et souhaitée.
+  • Analyse du public : niveau, expérience, motivation, contraintes,
+    équipement numérique.
+  • Analyse des contraintes : budget, délais, ressources humaines.
+  • Méthodes : entretiens, questionnaires, observation, focus groups,
+    analyse de documents existants.
+  Livrable : Rapport d'analyse des besoins.
+
+  D — DESIGN (conception) :
+  Objectif : définir "quoi enseigner et comment".
+  • Objectifs pédagogiques opérationnels (Bloom).
+  • Architecture pédagogique : séquencement logique des modules.
+  • Choix des modalités et médias (matrice médias).
+  • Stratégies pédagogiques (expositif, démonstratif, applicatif,
+    interrogatif, inductif, déductif).
+  • Storyboard : plan détaillé écran par écran.
+  • Plan d'évaluation (formative et sommative).
+  Livrable : Document de conception, storyboard.
+
+  D — DÉVELOPPEMENT :
+  Objectif : produire les contenus et les ressources.
+  • Création des textes, visuels, vidéos, animations, interactions.
+  • Développement avec outils auteurs (Storyline, Rise, H5P).
+  • Intégration dans le LMS et paramétrage SCORM/xAPI.
+  • Tests unitaires et pilote avec un groupe test.
+  Livrable : Module e-learning prêt au déploiement.
+
+  I — IMPLÉMENTATION :
+  Objectif : déployer et animer la formation.
+  • Formation des formateurs et tuteurs en ligne.
+  • Communication auprès des apprenants (emails, annonces Moodle).
+  • Ouverture de la session et accompagnement des premiers jours.
+  • Support technique et pédagogique tout au long de la session.
+
+  E — ÉVALUATION :
+  Modèle de Kirkpatrick (4 niveaux) :
+  Niveau 1 — Réaction : satisfaction des apprenants (questionnaire en fin
+    de formation). Indicateur : taux de satisfaction ≥ 80%.
+  Niveau 2 — Apprentissage : acquisition des connaissances et compétences
+    (quiz, évaluations, pré-test/post-test).
+  Niveau 3 — Comportement : transfert des apprentissages en situation de
+    travail (observation, entretien à 3 mois).
+  Niveau 4 — Résultats : impact sur les objectifs organisationnels (ROI,
+    qualité, productivité, satisfaction client).
+
+  CHAPITRE 3 : LE MODÈLE SAM (Successive Approximation Model)
+
+  Alternative agile à ADDIE, développé par Michael Allen.
+  3 phases principales :
+  1. PREPARATION : immersion rapide, collecte d'informations, savvy start.
+  2. ITERATIVE DESIGN : prototypage rapide → retours client → révisions.
+  3. ITERATIVE DEVELOPMENT : développement par cycles courts.
+  Avantage : prototypes rapides, réduction du risque, adaptation continue.
+  Inconvénient : exige une forte implication du client tout au long.
+
+  CHAPITRE 4 : SCÉNARISATION PÉDAGOGIQUE
+
+  4.1 Structure d'une séquence pédagogique type
+  1. ACCROCHE : capter l'attention (vidéo, question provocante, statistique).
+  2. OBJECTIFS : annoncer ce que l'apprenant va apprendre et pourquoi.
+  3. MISE EN SITUATION : contextualisation réaliste et professionnelle.
+  4. CONTENU : apports théoriques progressifs et bien segmentés.
+  5. ACTIVITÉS : exercices d'application, études de cas, quiz.
+  6. ÉVALUATION : vérification de l'acquisition des objectifs.
+  7. SYNTHÈSE : récapitulatif des points clés et ouverture.
+
+  4.2 Principes multimédia de Mayer (12 principes clés)
+  - Principe de cohérence : éliminer tout élément non pertinent.
+  - Principe de signalisation : mettre en évidence les éléments importants.
+  - Principe de redondance : image + narration > image + narration + texte.
+  - Principe de contiguïté spatiale : légendes près des images.
+  - Principe de contiguïté temporelle : animation + narration simultanées.
+  - Principe de segmentation : proposer des pauses entre les unités.
+  - Principe de pré-entraînement : introduire les concepts clés avant.
+  - Principe de modalité : narration audio préférable au texte à l'écran.
+
+  4.3 Rédiger un storyboard
+  Colonnes typiques : N° slide | Titre | Visuel | Narration/Texte |
+  Interaction | Notes techniques | Durée estimée.
+
+evaluation: |
+  - Analyse des besoins fictive (rapport 3-4 pages) → 25% — semaine 4.
+  - Storyboard complet (15-20 slides) pour un module de votre choix
+    → 45% — semaine 10.
+  - Présentation orale du storyboard (10 min) → 30% — semaine 12.
+
+ressources: |
+  - Dick, W., Carey, L., & Carey, J. (2015). The Systematic Design of
+    Instruction (8e éd.). Pearson.
+  - Mayer, R. E. (2009). Multimedia Learning (2e éd.). Cambridge UP.
+  - Allen, M. W., & Sites, R. (2012). Leaving ADDIE for SAM. ASTD Press.
+  - Paquette, G. (2002). L'ingénierie pédagogique. PUQ.
+
+conseils: |
+  - Pratiquez le storyboard dès le départ : commencez par des esquisses
+    sur papier avant de passer au format numérique.
+  - Testez vos conceptions sur des pairs (pas vos formateurs) pour un
+    retour authentique.
+  - Chaque décision de conception doit être justifiable par une théorie
+    de l'apprentissage vue en module 1.

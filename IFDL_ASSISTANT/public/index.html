@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFDL Assistant — Guide du Master IFDL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header>
+  <div class="logo">
+    <div class="logo-img"><img src="ifdl-logo.png" alt="IFDL Logo" onerror="this.parentElement.textContent='🎓'"></div>
+    <div>
+      <div><span>IFDL</span> <em>Assistant</em></div>
+      <div class="logo-sub">Master IFDL · Guide Intelligent</div>
+    </div>
+  </div>
+  <div class="header-center">
+    <div id="server-pill">
+      <div id="sdot"></div>
+      <span id="slabel">Connexion...</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="phase-badge" onclick="cyclePhase()" title="Votre étape dans le parcours">
+      <div class="phase-dot"></div>
+      <span id="phase-label">Nouveau</span>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Changer de thème">🌙</button>
+    <button class="new-session-btn" onclick="newSession()">+ Nouvelle session</button>
+    <button class="hamburger" id="hamburger-btn" onclick="toggleSidebar()" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Sidebar overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<!-- ═══════════════════ APP ═══════════════════ -->
+<div class="app">
+
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar">
+    <div class="sidebar-scroll">
+
+      <!-- Rôles de l'assistant -->
+      <div class="s-label">Rôle de l'assistant</div>
+      <div class="role-item active" id="role-integration" onclick="setRole('integration',this)">
+        <span class="role-icon">🤝</span>
+        <span class="role-name">Guide d'intégration</span>
+        <span class="role-tag">Accueil</span>
+      </div>
+      <div class="role-item" id="role-orientation" onclick="setRole('orientation',this)">
+        <span class="role-icon">🧭</span>
+        <span class="role-name">Conseiller d'orientation</span>
+        <span class="role-tag">Parcours</span>
+      </div>
+      <div class="role-item" id="role-academique" onclick="setRole('academique',this)">
+        <span class="role-icon">📚</span>
+        <span class="role-name">Assistant académique</span>
+        <span class="role-tag">Cours</span>
+      </div>
+      <div class="role-item" id="role-coach" onclick="setRole('coach',this)">
+        <span class="role-icon">⏱️</span>
+        <span class="role-name">Coach organisationnel</span>
+        <span class="role-tag">Temps</span>
+      </div>
+      <div class="role-item" id="role-pro" onclick="setRole('pro',this)">
+        <span class="role-icon">💼</span>
+        <span class="role-name">Guide professionnel</span>
+        <span class="role-tag">Carrière</span>
+      </div>
+      <div class="role-item" id="role-pfe" onclick="setRole('pfe',this)">
+        <span class="role-icon">🔬</span>
+        <span class="role-name">Conseiller PFE</span>
+        <span class="role-tag">Projet</span>
+      </div>
+
+      <!-- Parcours étudiant -->
+      <div class="s-label" style="margin-top:10px">Parcours étudiant</div>
+      <div class="parcours-item" id="p-inscription" onclick="goToParcours('inscription',this)">
+        <div class="parcours-step">1</div>
+        <div class="parcours-info">
+          <div class="parcours-name">Inscription & Accueil</div>
+          <div class="parcours-desc">Premiers pas, Moodle, profil</div>
+        </div>
+      </div>
+      <div class="parcours-item" id="p-decouverte" onclick="goToParcours('decouverte',this)">
+        <div class="parcours-step">2</div>
+        <div class="parcours-info">
+          <div class="parcours-name">Découverte du Master</div>
+          <div class="parcours-desc">Vision, objectifs, structure</div>
+        </div>
+      </div>
+      <div class="parcours-item" id="p-modules" onclick="goToParcours('modules',this)">
+        <div class="parcours-step">3</div>
+        <div class="parcours-info">
+          <div class="parcours-name">Modules de cours</div>
+          <div class="parcours-desc">Contenu, méthodes, évaluation</div>
+        </div>
+      </div>
+      <div class="parcours-item" id="p-organisation" onclick="goToParcours('organisation',this)">
+        <div class="parcours-step">4</div>
+        <div class="parcours-info">
+          <div class="parcours-name">Organisation du travail</div>
+          <div class="parcours-desc">Planning, méthodes, charge</div>
+        </div>
+      </div>
+      <div class="parcours-item" id="p-pro" onclick="goToParcours('pro',this)">
+        <div class="parcours-step">5</div>
+        <div class="parcours-info">
+          <div class="parcours-name">Orientation professionnelle</div>
+          <div class="parcours-desc">Débouchés, compétences, réseau</div>
+        </div>
+      </div>
+      <div class="parcours-item" id="p-pfe" onclick="goToParcours('pfe',this)">
+        <div class="parcours-step">6</div>
+        <div class="parcours-info">
+          <div class="parcours-name">Projet de Fin d'Études</div>
+          <div class="parcours-desc">PFE, mémoire, soutenance</div>
+        </div>
+      </div>
+
+      <!-- Modèle IA -->
+      <div class="s-label" style="margin-top:10px">Modèle IA</div>
+      <select class="model-select" id="model-select" onchange="changeModel(this.value)">
+        <optgroup label="✅ Gratuits">
+          <option value="mistralai/mistral-7b-instruct:free">Mistral 7B (gratuit)</option>
+          <option value="meta-llama/llama-3-8b-instruct:free">Llama 3 8B (gratuit)</option>
+          <option value="meta-llama/llama-3.1-8b-instruct:free">Llama 3.1 8B (gratuit)</option>
+          <option value="google/gemma-3-12b-it:free">Gemma 3 12B (gratuit)</option>
+          <option value="qwen/qwen-2-7b-instruct:free">Qwen 2 7B (gratuit)</option>
+          <option value="stepfun-ai/step-3.5-flash">stepfun-ai/step-3.5-flash (gratuit)</option>
+          <option value="nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free">nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free</option>
+        </optgroup>
+        <optgroup label="💎 Premium">
+          <option value="anthropic/claude-sonnet-4-5">Claude Sonnet 4.5</option>
+          <option value="openai/gpt-4o-mini">GPT-4o Mini</option>
+          <option value="google/gemini-2.0-flash-001">Gemini 2.0 Flash</option>
+          <option value="mistralai/mistral-large">Mistral Large</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="sidebar-progress">
+      <div class="sp-label">
+        <span>Progression dans le Master</span>
+        <span id="progress-pct">0%</span>
+      </div>
+      <div class="sp-bar"><div class="sp-fill" id="sp-fill" style="width:0%"></div></div>
+    </div>
+  </aside>
+
+  <!-- ══ MAIN ══ -->
+  <main class="main">
+    <div class="tabs">
+      <div class="tab active" id="tab-chat" onclick="switchTab('chat',this)">💬 Assistant</div>
+      <div class="tab" id="tab-parcours" onclick="switchTab('parcours',this)">🗺️ Parcours</div>
+      <div class="tab" id="tab-modules" onclick="switchTab('modules',this);renderModuleGrid()">📚 Modules</div>
+      <div class="tab" id="tab-quiz" onclick="switchTab('quiz',this)">🎯 Quiz</div>
+      <div class="tab" id="tab-stats" onclick="switchTab('stats',this);setTimeout(loadServerModules,100)">📊 Progrès & Base</div>
+    </div>
+
+    <!-- ─── CHAT ─── -->
+    <div class="panel active" id="panel-chat">
+      <div class="ctx-banner" id="ctx-banner">
+        <span class="ctx-icon" id="ctx-icon">🤝</span>
+        <span class="ctx-title" id="ctx-title">Guide d'intégration</span>
+        <span class="ctx-sep">·</span>
+        <span class="ctx-desc" id="ctx-desc">Accueil, premiers pas, navigation Moodle</span>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="welcome" id="welcome-screen">
+          <div class="welcome-icon"><img class="img-welcome" src="ifdl-logo.png" alt="IFDL Logo" onerror="this.parentElement.textContent='🎓'"></div>
+          <h2>Bienvenue au Master IFDL !</h2>
+          <p>Je suis votre <strong>Assistant Intelligent</strong>  votre guide tout au long du Master Ingénierie de la Formation et du Digital Learning.<br>
+          Je suis là pour vous accompagner <em>de votre inscription jusqu'à votre PFE.</em></p>
+          <div class="welcome-cards">
+            <div class="wcard" onclick="askSuggestion('Comment s\'inscrire et accéder à Moodle pour la première fois ?')">🤝 Je viens de m'inscrire</div>
+            <div class="wcard" onclick="askSuggestion('Présente-moi le Master IFDL : objectifs, structure, vision')">🎓 Présente le Master</div>
+            <div class="wcard" onclick="askSuggestion('Quels sont les modules du Master IFDL et leur contenu ?')">📚 Les modules du cours</div>
+            <div class="wcard" onclick="askSuggestion('Comment organiser mon temps et réussir ma formation à distance ?')">⏱️ Organiser mon temps</div>
+            <div class="wcard" onclick="askSuggestion('Quels sont les débouchés professionnels après le Master IFDL ?')">💼 Débouchés professionnels</div>
+            <div class="wcard" onclick="askSuggestion('Comment préparer et réussir mon PFE ?')">🔬 Préparer mon PFE</div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <div class="quick-chips" id="quick-chips">
+          <button class="qchip" onclick="askSuggestion('Explique-moi ce point en détail')">💡 Détailler</button>
+          <button class="qchip" onclick="askSuggestion('Donne-moi un exemple concret')">🔍 Exemple</button>
+          <button class="qchip" onclick="askSuggestion('Quelles sont les prochaines étapes pour moi ?')">➡️ Prochaines étapes</button>
+          <button class="qchip" onclick="askSuggestion('Comment puis-je me préparer ?')">✅ Comment se préparer</button>
+          <button class="qchip" onclick="askSuggestion('Fais-moi un récapitulatif de ce qu\'on vient de voir')">📋 Récapitulatif</button>
+          <button class="qchip" onclick="askSuggestion('J\'ai une question sur le contenu du cours')">📚 Question de cours</button>
+        </div>
+        <div class="input-wrap">
+          <textarea id="chat-input" placeholder="Posez votre question ou utilisez le micro 🎙️..." rows="1"
+            onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+          <button class="voice-btn" id="voice-btn" onclick="toggleVoiceInput()" title="Message vocal">
+            <svg id="voice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" y1="19" x2="12" y2="23"/>
+              <line x1="8" y1="23" x2="16" y2="23"/>
+            </svg>
+          </button>
+          <button class="send-btn" id="send-btn" onclick="sendMessage()" title="Envoyer">
+            <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+        <div id="voice-status" class="voice-status" style="display:none"></div>
+      </div>
+    </div>
+
+    <!-- ─── PARCOURS ─── -->
+    <div class="panel" id="panel-parcours">
+      <div class="parcours-panel">
+        <div class="section-title">🗺️ Votre Parcours dans le Master</div>
+        <p style="color:var(--text2);margin-bottom:24px;font-size:13.5px">Cliquez sur une étape pour obtenir un accompagnement personnalisé via l'assistant.</p>
+        <div class="parcours-grid">
+          <div class="pc-card" onclick="activateParcours('inscription')">
+            <div class="pc-num">Étape 1</div>
+            <div class="pc-icon">🤝</div>
+            <div class="pc-title">Inscription & Accueil</div>
+            <div class="pc-desc">Premier accès à Moodle, création du profil, prise en main de la plateforme, présentation de la promotion.</div>
+            <button class="pc-btn" onclick="event.stopPropagation();askAndSwitch('Comment s\'inscrire et configurer mon profil Moodle pour le Master IFDL ?')">→ M'accompagner</button>
+          </div>
+          <div class="pc-card" onclick="activateParcours('decouverte')">
+            <div class="pc-num">Étape 2</div>
+            <div class="pc-icon">🎓</div>
+            <div class="pc-title">Découverte du Master</div>
+            <div class="pc-desc">Vision, objectifs pédagogiques, structure du programme, équipe enseignante, méthodes de travail et évaluation.</div>
+            <button class="pc-btn" onclick="event.stopPropagation();askAndSwitch('Présente-moi la vision, la structure et les objectifs du Master IFDL')">→ M'accompagner</button>
+          </div>
+          <div class="pc-card" onclick="activateParcours('modules')">
+            <div class="pc-num">Étape 3</div>
+            <div class="pc-icon">📚</div>
+            <div class="pc-title">Compréhension des Modules</div>
+            <div class="pc-desc">Contenu détaillé de chaque module, objectifs d'apprentissage, ressources, méthodes d'évaluation et conseils de réussite.</div>
+            <button class="pc-btn" onclick="event.stopPropagation();askAndSwitch('Explique-moi l\'ensemble des modules du Master IFDL et comment les aborder')">→ M'accompagner</button>
+          </div>
+          <div class="pc-card" onclick="activateParcours('organisation')">
+            <div class="pc-num">Étape 4</div>
+            <div class="pc-icon">⏱️</div>
+            <div class="pc-title">Organisation du Travail</div>
+            <div class="pc-desc">Gestion du temps en formation à distance, méthodes d'étude efficaces, équilibre vie pro/perso/études, outils de productivité.</div>
+            <button class="pc-btn" onclick="event.stopPropagation();askAndSwitch('Comment organiser efficacement mon temps pour réussir le Master IFDL à distance ?')">→ M'accompagner</button>
+          </div>
+          <div class="pc-card" onclick="activateParcours('pro')">
+            <div class="pc-num">Étape 5</div>
+            <div class="pc-icon">💼</div>
+            <div class="pc-title">Orientation Professionnelle</div>
+            <div class="pc-desc">Débouchés du Master, compétences développées, secteurs porteurs, construction du profil LinkedIn, réseaux professionnels.</div>
+            <button class="pc-btn" onclick="event.stopPropagation();askAndSwitch('Quels sont les débouchés professionnels du Master IFDL et comment construire mon profil ?')">→ M'accompagner</button>
+          </div>
+          <div class="pc-card" onclick="activateParcours('pfe')">
+            <div class="pc-num">Étape 6</div>
+            <div class="pc-icon">🔬</div>
+            <div class="pc-title">Projet de Fin d'Études</div>
+            <div class="pc-desc">Choix du sujet, méthodologie de recherche, structure du mémoire, rédaction académique, préparation de la soutenance.</div>
+            <button class="pc-btn" onclick="event.stopPropagation();askAndSwitch('Comment choisir mon sujet de PFE et structurer mon mémoire de Master IFDL ?')">→ M'accompagner</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── MODULES ─── -->
+    <div class="panel" id="panel-modules">
+      <div class="modules-panel">
+        <div class="section-title">📚 Modules du Master IFDL</div>
+        <p style="color:var(--text2);margin-bottom:20px;font-size:13.5px">Cliquez sur un module pour activer l'assistant académique spécialisé.</p>
+        <div class="module-grid" id="module-grid">
+          <!-- Généré par JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── QUIZ ─── -->
+    <div class="panel" id="panel-quiz">
+      <div class="quiz-outer">
+        <div class="quiz-header-row">
+          <div class="section-title" style="margin-bottom:0">🎯 Quiz d'évaluation</div>
+          <button class="gen-btn" id="gen-quiz-btn" onclick="generateQuiz()"><span>✨</span>Générer un Quiz IA</button>
+        </div>
+        <div id="quiz-score-display" style="display:none"></div>
+        <div id="quiz-container">
+          <div style="text-align:center;padding:60px 20px;color:var(--text3)">
+            <div style="font-size:42px;margin-bottom:14px">🎯</div>
+            <p>Sélectionnez un module ou un rôle, puis générez un quiz pour tester vos connaissances.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── STATS ─── -->
+    <div class="panel" id="panel-stats">
+      <div class="stats-outer">
+        <div class="section-title">📊 Votre Progression</div>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-ico">💬</div><div class="stat-val acc" id="sq">0</div><div class="stat-lbl">Questions posées</div></div>
+          <div class="stat-card"><div class="stat-ico">🎯</div><div class="stat-val tl" id="sqs">0%</div><div class="stat-lbl">Score moyen quiz</div></div>
+          <div class="stat-card"><div class="stat-ico">🗺️</div><div class="stat-val am" id="se">—</div><div class="stat-lbl">Étape actuelle</div></div>
+        </div>
+        <div class="prog-section">
+          <div class="prog-title">Compétences développées</div>
+          <div class="prog-row"><div class="prog-lbl">Compréhension théorique</div><div class="prog-bar"><div class="prog-fill" id="pc1" style="width:0%"></div></div><div class="prog-v" id="pv1">0%</div></div>
+          <div class="prog-row"><div class="prog-lbl">Application pratique</div><div class="prog-bar"><div class="prog-fill" id="pc2" style="width:0%"></div></div><div class="prog-v" id="pv2">0%</div></div>
+          <div class="prog-row"><div class="prog-lbl">Analyse critique</div><div class="prog-bar"><div class="prog-fill" id="pc3" style="width:0%"></div></div><div class="prog-v" id="pv3">0%</div></div>
+          <div class="prog-row"><div class="prog-lbl">Projet professionnel</div><div class="prog-bar"><div class="prog-fill" id="pc4" style="width:0%"></div></div><div class="prog-v" id="pv4">0%</div></div>
+          <div class="prog-row"><div class="prog-lbl">Autonomie</div><div class="prog-bar"><div class="prog-fill" id="pc5" style="width:0%"></div></div><div class="prog-v" id="pv5">0%</div></div>
+        </div>
+
+        <!-- Base de connaissances -->
+        <div class="prog-title" style="margin-top:28px">📁 Base de Connaissances</div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:18px;margin-bottom:14px;">
+          <div style="font-size:12.5px;color:var(--text2);margin-bottom:10px;" id="kb-status-row">
+            Chargement de l'état des fichiers...
+          </div>
+          <div id="kb-files-list" style="display:flex;flex-direction:column;gap:6px;"></div>
+          <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border);font-size:12px;color:var(--text3);">
+            📝 Éditez les fichiers dans <code style="background:var(--bg3);padding:1px 6px;border-radius:4px;color:var(--teal)">knowledge/</code> pour enrichir les réponses.<br>
+            Consultez <code style="background:var(--bg3);padding:1px 6px;border-radius:4px;color:var(--teal)">COMMENT_EDITER.md</code> pour les instructions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════ -->
+<script>
+// ─────────────────────────────────────────────
+// RÔLES ET LEURS CONTEXTES
+// ─────────────────────────────────────────────
+const ROLES = {
+  integration: {
+    name: "Guide d'intégration",
+    icon: "🤝",
+    desc: "Accueil, premiers pas, navigation Moodle",
+    prompt: `Tu es le guide d'intégration du Master IFDL. Tu accueilles chaleureusement les nouveaux étudiants et tu les aides à :
+- Comprendre les démarches d'inscription et d'accueil
+- Naviguer dans Moodle (plateforme de formation)
+- Configurer leur profil et environnement de travail
+- Rejoindre la communauté étudiante
+- Comprendre les règles et le fonctionnement du Master
+Ton ton est bienveillant, rassurant et pratique. Tu donnes des étapes concrètes et numérotées.`,
+    chips: ["Comment me connecter à Moodle ?","Où trouver le calendrier des cours ?","Comment contacter mon formateur ?","Comment rejoindre les groupes de travail ?"]
+  },
+  orientation: {
+    name: "Conseiller d'orientation",
+    icon: "🧭",
+    desc: "Vision globale, parcours, structure du Master",
+    prompt: `Tu es le conseiller d'orientation du Master IFDL. Tu aides les étudiants à :
+- Comprendre la vision et les objectifs du Master IFDL
+- Visualiser la structure globale du programme (M1, M2)
+- Comprendre comment les modules s'articulent entre eux
+- Définir leur projet professionnel en lien avec le Master
+- Identifier leurs points forts et axes de développement
+Tu adoptes une posture de conseil stratégique, avec une vision long terme.`,
+    chips: ["Quelle est la structure du Master ?","Comment les modules s'articulent ?","Quel profil dois-je développer ?","Comment aligner le Master avec mon projet pro ?"]
+  },
+  academique: {
+    name: "Assistant académique",
+    icon: "📚",
+    desc: "Explication des modules, exercices, évaluation",
+    prompt: `Tu es l'assistant académique du Master IFDL. Tu aides les étudiants à :
+- Comprendre le contenu de chaque module du Master
+- Travailler les concepts théoriques et les appliquer
+- Préparer les évaluations et examens
+- Réaliser les travaux et devoirs
+- Explorer les ressources bibliographiques
+Tu structures toujours tes réponses : définition → explication → exemple → application → à retenir.`,
+    chips: ["Explique ce concept en détail","Donne-moi un exemple pratique","Comment ce concept s'applique-t-il en entreprise ?","Quelles ressources pour approfondir ?"]
+  },
+  coach: {
+    name: "Coach organisationnel",
+    icon: "⏱️",
+    desc: "Gestion du temps, méthodes d'étude, équilibre",
+    prompt: `Tu es le coach organisationnel du Master IFDL. Tu aides les étudiants à :
+- Organiser leur temps entre travail, vie personnelle et études
+- Adopter des méthodes d'étude efficaces (Pomodoro, mind mapping, etc.)
+- Gérer le stress et les périodes de charge intense
+- Utiliser les bons outils de productivité
+- Maintenir leur motivation sur la durée
+Ton ton est dynamique, pragmatique et encourageant. Tu proposes des plans d'action concrets.`,
+    chips: ["Aide-moi à planifier ma semaine","Méthodes pour retenir les cours efficacement","Comment gérer la charge de travail ?","Je me sens dépassé(e), que faire ?"]
+  },
+  pro: {
+    name: "Guide professionnel",
+    icon: "💼",
+    desc: "Débouchés, compétences, carrière, réseau",
+    prompt: `Tu es le guide professionnel du Master IFDL. Tu aides les étudiants à :
+- Identifier les débouchés professionnels du Master IFDL
+- Comprendre les compétences valorisées sur le marché
+- Construire leur profil LinkedIn et leur portfolio
+- Développer leur réseau professionnel
+- Préparer leur insertion ou reconversion professionnelle
+Tu adoptes une posture de mentor carrière, concret et orienté résultats.`,
+    chips: ["Quels métiers après le Master ?","Comment construire mon profil LinkedIn ?","Secteurs qui recrutent le plus ?","Comment valoriser le Master en entretien ?"]
+  },
+  pfe: {
+    name: "Conseiller PFE",
+    icon: "🔬",
+    desc: "PFE, mémoire de Master, méthodologie, soutenance",
+    prompt: `Tu es le conseiller PFE du Master IFDL. Tu aides les étudiants à :
+- Choisir un sujet de PFE pertinent et réalisable
+- Construire leur problématique de recherche
+- Mener leur revue de littérature académique
+- Choisir et appliquer leur méthodologie
+- Rédiger leur mémoire selon les normes académiques
+- Préparer leur soutenance devant un jury
+Tu es rigoureux, pédagogue et tu guides étape par étape.`,
+    chips: ["Comment choisir mon sujet PFE ?","Comment formuler ma problématique ?","Structure du mémoire de Master","Comment me préparer pour la soutenance ?"]
+  }
+};
+
+// ─────────────────────────────────────────────
+// ÉTAPES DU PARCOURS
+// ─────────────────────────────────────────────
+const PARCOURS_STEPS = {
+  inscription: { name: "Inscription & Accueil", short: "Inscription", role: 'integration' },
+  decouverte:  { name: "Découverte du Master",   short: "Découverte",  role: 'orientation' },
+  modules:     { name: "Modules de cours",        short: "Cours",       role: 'academique' },
+  organisation:{ name: "Organisation du travail", short: "Organisation",role: 'coach' },
+  pro:         { name: "Orientation pro",          short: "Pro",         role: 'pro' },
+  pfe:         { name: "Projet de Fin d'Études",   short: "PFE",         role: 'pfe' }
+};
+
+const PHASES = ['Nouveau','En cours','Avancé','Expert'];
+
+// ─────────────────────────────────────────────
+// ÉTAT GLOBAL
+// ─────────────────────────────────────────────
+const API_URL = 'http://localhost:3000/api/chat';
+
+let state = {
+  messages:       [],
+  activeRole:     'integration',
+  activeModule:   null,
+  activeParcours: null,
+  phaseIdx:       0,
+  selectedModel:  'mistralai/mistral-7b-instruct:free',
+  stats:          { questions: 0, quizScore: [], etape: '—' },
+  isLoading:      false,
+  quizAnswered:   0,
+  quizCorrect:    0,
+  currentQuiz:    null,
+  progress:       0,
+};
+
+// ─────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────
+async function init() {
+  await renderModuleGrid();
+  checkServer();
+  updateStats();
+  updateCtxBanner();
+}
+
+// ─────────────────────────────────────────────
+// MODULES GRID — chargé depuis /api/modules (knowledge/)
+// ─────────────────────────────────────────────
+
+// Palette d'accents cyclique pour les cartes
+const MODULE_ACCENTS = ['accent','teal-accent','amber-accent','coral-accent','blue-accent','gold-accent'];
+
+// Cache local des modules serveur
+let _serverModules = null;
+
+async function renderModuleGrid() {
+  const grid = document.getElementById('module-grid');
+
+  // 1. Affichage squelette pendant le chargement
+  grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">
+    <div style="font-size:28px;margin-bottom:10px">⏳</div>
+    <div>Chargement des modules depuis la base de connaissances…</div>
+  </div>`;
+
+  try {
+    const r = await fetch('http://localhost:3000/api/modules');
+    const d = await r.json();
+
+    // 2. Filtrer uniquement les modules disponibles (fichier YAML non vide)
+    const available = d.modules.filter(m => m.available);
+    _serverModules = d.modules; // cache pour badges stats
+
+    if (available.length === 0) {
+      grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">
+        <div style="font-size:32px;margin-bottom:10px">📂</div>
+        <div style="font-size:15px;margin-bottom:8px;color:var(--text2)">Aucun module disponible</div>
+        <div style="font-size:12.5px">Ajoutez du contenu dans <code style="background:var(--bg3);padding:2px 6px;border-radius:4px">knowledge/modules/</code></div>
+      </div>`;
+      return;
+    }
+
+    // 3. Rendre les cartes avec les métadonnées YAML réelles
+    grid.innerHTML = available.map((m, i) => {
+      const meta   = m.meta || {};
+      const accent = MODULE_ACCENTS[i % MODULE_ACCENTS.length];
+      const nom    = meta.nom    || m.id.replace(/_/g,' ');
+      const icone  = meta.icone  || '📘';
+      const objectif = meta.objectif || '';
+      const semestre = meta.semestre ? `<span class="mod-tag">${meta.semestre}</span>` : '';
+      const credits  = meta.credits  ? `<span class="mod-tag">${meta.credits} ECTS</span>` : '';
+      const sizeKb   = (m.size / 1000).toFixed(1);
+      const tags     = (meta.tags && meta.tags.length)
+        ? meta.tags.slice(0, 4).map(t => `<span class="mod-tag">${t}</span>`).join('')
+        : '';
+
+      return `
+        <div class="mod-card ${accent}" id="module-btn-${m.id}" onclick="selectModule('${m.id}')">
+          <div class="mod-icon-big">${icone}</div>
+          <div class="mod-title">${nom}</div>
+          ${objectif ? `<div class="mod-desc">${objectif.length > 120 ? objectif.slice(0,117)+'…' : objectif}</div>` : ''}
+          <div class="mod-tags" style="margin-top:8px;flex-wrap:wrap;gap:4px;display:flex">
+            ${semestre}${credits}${tags}
+          </div>
+          <div style="margin-top:10px;font-size:10px;color:var(--teal);font-family:var(--font-head);font-weight:600;letter-spacing:.4px">
+            ✓ ${sizeKb}k — contenu chargé
+          </div>
+        </div>`;
+    }).join('');
+
+    // 4. Mettre à jour le MODULES in-memory pour que selectModule() fonctionne
+    // (les modules serveur ont la même clé que les ids yaml)
+    available.forEach(m => {
+      const meta = m.meta || {};
+      if (!MODULES[m.id]) {
+        // Créer une entrée légère si absente du MODULES statique
+        MODULES[m.id] = {
+          name: meta.nom || m.id.replace(/_/g,' '),
+          icon: meta.icone || '📘',
+          desc: meta.objectif || '',
+          tags: meta.tags || [],
+          content: '', // le contenu réel vient du serveur via /api/chat
+          accent: MODULE_ACCENTS[Object.keys(MODULES).length % MODULE_ACCENTS.length],
+        };
+      }
+    });
+
+    // 5. Mettre à jour le statut KB dans stats
+    const loaded = d.modules.filter(m => m.available).length;
+    const statusRow = document.getElementById('kb-status-row');
+    if (statusRow) {
+      statusRow.innerHTML = `<strong style="color:var(--teal)">${loaded}/${d.modules.length} modules chargés</strong> — ${(d.totalChars/1000).toFixed(0)}k caractères disponibles.`;
+    }
+
+  } catch (e) {
+    // Serveur hors ligne → fallback sur MODULES statique
+    grid.innerHTML = Object.entries(MODULES).map(([key, mod], i) => `
+      <div class="mod-card ${mod.accent}" id="module-btn-${key}" onclick="selectModule('${key}')">
+        <div class="mod-icon-big">${mod.icon}</div>
+        <div class="mod-title">${mod.name}</div>
+        <div class="mod-desc">${mod.desc}</div>
+        <div class="mod-tags">${mod.tags.map(t=>`<span class="mod-tag">${t}</span>`).join('')}</div>
+        <div style="margin-top:10px;font-size:10px;color:var(--amber);font-family:var(--font-head)">⚠ Mode hors ligne</div>
+      </div>`).join('');
+  }
+}
+
+// ─────────────────────────────────────────────
+// RÔLE
+// ─────────────────────────────────────────────
+function setRole(role, el) {
+  state.activeRole = role;
+  state.activeModule = null;
+  document.querySelectorAll('.role-item').forEach(r => r.classList.remove('active'));
+  if (el) el.classList.add('active');
+  updateCtxBanner();
+  updateQuickChips();
+  switchTab('chat', document.getElementById('tab-chat'));
+  const r = ROLES[role];
+  appendBotMessage(`**${r.icon} ${r.name} activé**\n\nJe suis maintenant votre ${r.name.toLowerCase()}. ${r.desc}.\n\nQue souhaitez-vous savoir ?`, true);
+}
+
+// ─────────────────────────────────────────────
+// MODULE ACADÉMIQUE
+// ─────────────────────────────────────────────
+function selectModule(key) {
+  state.activeModule = key;
+  state.activeRole = 'academique';
+  document.querySelectorAll('.role-item').forEach(r => r.classList.remove('active'));
+  document.getElementById('role-academique')?.classList.add('active');
+  updateCtxBanner();
+  switchTab('chat', document.getElementById('tab-chat'));
+  const mod = MODULES[key] || { icon:'📘', name: key.replace(/_/g,' '), tags:[], desc:'' };
+  const tagsLine = mod.tags && mod.tags.length ? `\n\n💡 Sujets : ${mod.tags.join(' · ')}` : '';
+  appendBotMessage(`**${mod.icon} Module "${mod.name}" activé**\n\nJe suis prêt à répondre à vos questions sur ce module : théorie, exemples, exercices, liens avec la pratique…${tagsLine}`, true);
+  showToast(`${mod.icon} Module : ${mod.name}`);
+}
+
+// ─────────────────────────────────────────────
+// PARCOURS
+// ─────────────────────────────────────────────
+function goToParcours(step, el) {
+  state.activeParcours = step;
+  const s = PARCOURS_STEPS[step];
+  state.activeRole = s.role;
+  document.querySelectorAll('.parcours-item').forEach(p => p.classList.remove('active'));
+  if (el) el.classList.add('active');
+  document.querySelectorAll('.role-item').forEach(r => r.classList.remove('active'));
+  document.getElementById('role-' + s.role)?.classList.add('active');
+  state.stats.etape = s.short;
+  updateCtxBanner();
+  updateStats();
+  updateProgress(step);
+}
+
+function activateParcours(step) {
+  const s = PARCOURS_STEPS[step];
+  goToParcours(step, document.getElementById('p-' + step));
+  askAndSwitch(getParcoursQuestion(step));
+}
+
+function getParcoursQuestion(step) {
+  const q = {
+    inscription:  "Comment m'inscrire, configurer mon profil Moodle et bien démarrer le Master IFDL ?",
+    decouverte:   "Présente-moi en détail la vision, la structure et les objectifs du Master IFDL",
+    modules:      "Explique-moi l'ensemble des modules du Master IFDL, leur contenu et comment les aborder",
+    organisation: "Comment organiser efficacement mon temps pour réussir le Master IFDL à distance ?",
+    pro:          "Quels sont les débouchés professionnels du Master IFDL et comment construire mon profil ?",
+    pfe:          "Comment choisir mon sujet de PFE et structurer mon mémoire de Master IFDL ?"
+  };
+  return q[step] || "Parle-moi de cette étape du parcours";
+}
+
+function updateProgress(step) {
+  const steps = Object.keys(PARCOURS_STEPS);
+  const idx = steps.indexOf(step);
+  const pct = Math.round(((idx + 1) / steps.length) * 100);
+  state.progress = pct;
+  document.getElementById('progress-pct').textContent = pct + '%';
+  document.getElementById('sp-fill').style.width = pct + '%';
+}
+
+// ─────────────────────────────────────────────
+// CONTEXT BANNER
+// ─────────────────────────────────────────────
+function updateCtxBanner() {
+  const banner = document.getElementById('ctx-banner');
+  banner.classList.add('show');
+  if (state.activeModule) {
+    const mod = MODULES[state.activeModule];
+    document.getElementById('ctx-icon').textContent = mod.icon;
+    document.getElementById('ctx-title').textContent = 'Module : ' + mod.name;
+    document.getElementById('ctx-desc').textContent = mod.desc;
+  } else {
+    const r = ROLES[state.activeRole];
+    document.getElementById('ctx-icon').textContent = r.icon;
+    document.getElementById('ctx-title').textContent = r.name;
+    document.getElementById('ctx-desc').textContent = r.desc;
+  }
+}
+
+function updateQuickChips() {
+  const chips = document.getElementById('quick-chips');
+  const r = ROLES[state.activeRole];
+  chips.innerHTML = r.chips.map(c =>
+    `<button class="qchip" onclick="askSuggestion('${c.replace(/'/g,"\\'")}')">${c}</button>`
+  ).join('');
+}
+
+// ─────────────────────────────────────────────
+// PROMPT SYSTÈME
+// Note : le contenu des cours est injecté côté
+// serveur depuis les fichiers knowledge/*.yaml
+// Ici on envoie uniquement le rôle + directives
+// ─────────────────────────────────────────────
+function buildSystemPrompt() {
+  const rolePrompt = state.activeRole ? ROLES[state.activeRole].prompt : ROLES.integration.prompt;
+  const phase = PHASES[state.phaseIdx];
+  const moduleHint = state.activeModule
+    ? `\nMODULE ACTIF : le fichier de cours "${state.activeModule}" est chargé par le serveur.`
+    : '';
+
+  return `${rolePrompt}${moduleHint}
+
+DIRECTIVES GÉNÉRALES :
+1. Tu t'adresses à un(e) étudiant(e) de niveau "${phase}" dans son parcours Master IFDL.
+2. Appuie-toi EXCLUSIVEMENT sur la base de connaissances officielle fournie par le serveur.
+   Si une information n'y figure pas, dis-le honnêtement plutôt que d'inventer.
+3. Structure tes réponses avec des titres clairs (### Titre).
+4. Utilise 💡 pour les conseils pratiques, 📌 pour les points clés, ✅ pour les actions concrètes.
+5. Termine toujours par une question de relance ou une invitation à explorer la prochaine étape.
+6. Réponds TOUJOURS en français.
+7. Sois chaleureux(se), encourageant(e) et professionnel(le).
+8. Cite les chapitres ou sections du cours quand tu t'y réfères explicitement.`;
+}
+
+// ─────────────────────────────────────────────
+// APPEL API — envoie moduleId pour cibler le
+// bon fichier de connaissances côté serveur
+// ─────────────────────────────────────────────
+async function callAI(messages, customSystem = null) {
+  const body = {
+    system:     customSystem || buildSystemPrompt(),
+    messages,
+    max_tokens: 1400,
+    model:      state.selectedModel,
+  };
+  // Transmettre l'ID du module actif au serveur
+  // → il chargera uniquement ce fichier .yaml
+  if (state.activeModule) body.moduleId = state.activeModule;
+
+  const res = await fetch(API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ error: 'Erreur inconnue' }));
+    throw new Error(err.error || `HTTP ${res.status}`);
+  }
+  const data = await res.json();
+  return data.content;
+}
+
+// ─────────────────────────────────────────────
+// MESSAGES
+// ─────────────────────────────────────────────
+function appendBotMessage(content, withChips = false) {
+  const msgs = document.getElementById('chat-messages');
+  const welcome = document.getElementById('welcome-screen');
+  if (welcome) welcome.remove();
+  const div = document.createElement('div');
+  div.className = 'msg ai';
+  const r = ROLES[state.activeRole] || ROLES.integration;
+  const chips = withChips ? (state.activeModule
+    ? ['💡 Exemple concret','🔄 Reformuler','📝 Exercice pratique','❓ Question rapide']
+    : r.chips.slice(0,4)
+  ) : [];
+  const escapedContent = content.replace(/\\/g,'\\\\').replace(/`/g,'\\`');
+  div.innerHTML = `
+    <div class="msg-avatar">🤖</div>
+    <div class="bubble">${formatContent(content)}
+      ${chips.length ? `<div class="action-chips">${chips.map(c=>`<div class="chip" onclick="askSuggestion('${c.replace(/'/g,"\\'")}')">${c}</div>`).join('')}</div>` : ''}
+      <button class="tts-btn" data-text="${content.replace(/"/g,'&quot;').replace(/\n/g,' ')}" title="Écouter la réponse">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+        <span>Écouter</span>
+      </button>
+    </div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+async function sendMessage() {
+  if (state.isLoading) return;
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text) return;
+
+  const welcome = document.getElementById('welcome-screen');
+  if (welcome) welcome.remove();
+
+  state.isLoading = true;
+  input.value = '';
+  autoResize(input);
+  document.getElementById('send-btn').disabled = true;
+
+  // Message utilisateur
+  const msgs = document.getElementById('chat-messages');
+  const userDiv = document.createElement('div');
+  userDiv.className = 'msg user';
+  userDiv.innerHTML = `<div class="msg-avatar">🎓</div><div class="bubble">${escapeHtml(text)}</div>`;
+  msgs.appendChild(userDiv);
+  msgs.scrollTop = msgs.scrollHeight;
+
+  state.messages.push({ role: 'user', content: text });
+  state.stats.questions++;
+  updateStats();
+
+  // Typing
+  const typingEl = document.createElement('div');
+  typingEl.className = 'typing-row'; typingEl.id = 'typing-el';
+  typingEl.innerHTML = '<div class="msg-avatar" style="width:33px;height:33px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--teal));display:flex;align-items:center;justify-content:center;font-size:15px">🤖</div><div class="typing-dots"><span></span><span></span><span></span></div>';
+  msgs.appendChild(typingEl);
+  msgs.scrollTop = msgs.scrollHeight;
+
+  try {
+    const reply = await callAI(state.messages);
+    document.getElementById('typing-el')?.remove();
+    state.messages.push({ role: 'assistant', content: reply });
+    appendBotMessage(reply, true);
+    updateProgressBars();
+  } catch (e) {
+    document.getElementById('typing-el')?.remove();
+    appendBotMessage(`⚠️ **Erreur :** ${e.message}\n\nVérifiez que le serveur est lancé (\`node server.js\`) et que \`OPENROUTER_API_KEY\` est dans \`.env\`.`);
+  }
+
+  state.isLoading = false;
+  document.getElementById('send-btn').disabled = false;
+  input.focus();
+}
+
+function askSuggestion(prompt) {
+  document.getElementById('chat-input').value = prompt;
+  switchTab('chat', document.getElementById('tab-chat'));
+  sendMessage();
+}
+
+function askAndSwitch(prompt) {
+  switchTab('chat', document.getElementById('tab-chat'));
+  setTimeout(() => {
+    document.getElementById('chat-input').value = prompt;
+    sendMessage();
+  }, 100);
+}
+
+// ─────────────────────────────────────────────
+// QUIZ
+// ─────────────────────────────────────────────
+async function generateQuiz() {
+  const btn = document.getElementById('gen-quiz-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Génération...';
+
+  const topic = state.activeModule
+    ? `le module "${MODULES[state.activeModule].name}" du Master IFDL`
+    : `le Master IFDL et le rôle "${ROLES[state.activeRole].name}"`;
+  const context = state.activeModule
+    ? MODULES[state.activeModule].content.substring(0, 2000)
+    : IFDL_KNOWLEDGE.master.substring(0, 1500);
+
+  const sys = `Tu es un expert en évaluation pédagogique du Master IFDL.
+RETOURNE UNIQUEMENT du JSON valide SANS backtick, SANS texte avant ou après.
+Format exact :
+{"questions":[{"question":"...","options":["A. ...","B. ...","C. ...","D. ..."],"correct":0,"explanation":"..."}]}`;
+
+  try {
+    const raw = await callAI([{ role:'user', content:`4 questions QCM pertinentes sur ${topic}.\nContenu de référence :\n${context}` }], sys);
+    const quiz = JSON.parse(raw.replace(/```json|```/g,'').trim());
+    state.currentQuiz = quiz;
+    state.quizAnswered = 0;
+    state.quizCorrect = 0;
+    renderQuiz(quiz);
+    document.getElementById('quiz-score-display').style.display = 'none';
+  } catch(e) { showToast('❌ Erreur quiz : ' + e.message); }
+
+  btn.disabled = false;
+  btn.innerHTML = '<span>✨</span>Générer un Quiz IA';
+}
+
+function renderQuiz(quiz) {
+  const c = document.getElementById('quiz-container');
+  c.innerHTML = '';
+  quiz.questions.forEach((q,idx) => {
+    const card = document.createElement('div');
+    card.className = 'quiz-card';
+    card.innerHTML = `
+      <div class="quiz-q"><span>Q${idx+1}.</span> ${escapeHtml(q.question)}</div>
+      <div class="quiz-opts">
+        ${q.options.map((o,i)=>`
+          <div class="qopt" id="qopt-${idx}-${i}" onclick="answerQuiz(${idx},${i},${q.correct})">
+            <div class="opt-l">${String.fromCharCode(65+i)}</div>${escapeHtml(o)}
+          </div>`).join('')}
+      </div>
+      <div class="quiz-expl" id="qexpl-${idx}">✅ ${escapeHtml(q.explanation)}</div>`;
+    c.appendChild(card);
+  });
+}
+
+function answerQuiz(qIdx, optIdx, correct) {
+  const opts = document.querySelectorAll(`[id^="qopt-${qIdx}-"]`);
+  if (opts[0].classList.contains('answered')) return;
+  opts.forEach(o => o.classList.add('answered'));
+  opts[optIdx].classList.add(optIdx === correct ? 'correct' : 'wrong');
+  if (optIdx !== correct) opts[correct].classList.add('correct');
+  document.getElementById(`qexpl-${qIdx}`).style.display = 'block';
+  state.quizAnswered++;
+  if (optIdx === correct) state.quizCorrect++;
+  if (state.quizAnswered === state.currentQuiz.questions.length) {
+    const pct = Math.round(state.quizCorrect / state.quizAnswered * 100);
+    state.stats.quizScore.push(pct);
+    const emoji = pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '💪';
+    const d = document.getElementById('quiz-score-display');
+    d.innerHTML = `<div class="quiz-score-box"><div class="score-num">${pct}%</div><div class="score-lbl">${emoji} ${state.quizCorrect}/${state.quizAnswered} bonnes réponses</div></div>`;
+    d.style.display = 'block';
+    updateStats();
+  }
+}
+
+// ─────────────────────────────────────────────
+// STATS & PROGRÈS
+// ─────────────────────────────────────────────
+function updateStats() {
+  document.getElementById('sq').textContent = state.stats.questions;
+  document.getElementById('se').textContent = state.stats.etape;
+  const avg = state.stats.quizScore.length
+    ? Math.round(state.stats.quizScore.reduce((a,b)=>a+b,0)/state.stats.quizScore.length) : 0;
+  document.getElementById('sqs').textContent = avg + '%';
+}
+
+function updateProgressBars() {
+  const q   = Math.min(state.stats.questions * 7, 90);
+  const qz  = state.stats.quizScore.length ? state.stats.quizScore.at(-1) : 0;
+  const pro = state.progress;
+  const aut = Math.min(state.stats.questions * 4 + pro * 0.3, 88);
+  [['pc1',q],['pc2',qz],['pc3',Math.min(q*.75,75)],['pc4',pro],['pc5',aut]].forEach(([id,v]) => {
+    document.getElementById(id).style.width = v + '%';
+    document.getElementById('p'+id.replace('pc','v')).textContent = Math.round(v) + '%';
+  });
+}
+
+// ─────────────────────────────────────────────
+// FORMATAGE
+// ─────────────────────────────────────────────
+function formatContent(text) {
+  // 1. Protéger les blocs code avant tout traitement
+  const codeBlocks = [];
+  text = text.replace(/```([\s\S]*?)```/g, (_, code) => {
+    codeBlocks.push(code);
+    return `\x00CODE${codeBlocks.length - 1}\x00`;
+  });
+
+  // 2. Traitement ligne par ligne
+  const lines = text.split('\n');
+  const out = [];
+  let inList = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    let l = lines[i];
+
+    // Ignorer les lignes vides
+    if (!l.trim()) {
+      if (inList) { out.push('</ul>'); inList = false; }
+      continue;
+    }
+
+    // Restaurer les blocs code
+    if (l.includes('\x00CODE')) {
+      if (inList) { out.push('</ul>'); inList = false; }
+      l = l.replace(/\x00CODE(\d+)\x00/g, (_, idx) =>
+        `<div class="code-box">${escapeHtml(codeBlocks[idx])}</div>`);
+      out.push(l);
+      continue;
+    }
+
+    // Titres (### ## ####)
+    const h4 = l.match(/^#{4}\s+(.*)/);
+    const h3 = l.match(/^#{2,3}\s+(.*)/);
+    if (h4) {
+      if (inList) { out.push('</ul>'); inList = false; }
+      out.push('<h4>' + inlineFormat(h4[1]) + '</h4>');
+      continue;
+    }
+    if (h3) {
+      if (inList) { out.push('</ul>'); inList = false; }
+      out.push('<h3>' + inlineFormat(h3[1]) + '</h3>');
+      continue;
+    }
+
+    // Séparateur ---
+    if (/^---+$/.test(l.trim())) {
+      if (inList) { out.push('</ul>'); inList = false; }
+      out.push('<hr style="border:none;border-top:1px solid var(--border);margin:10px 0;">');
+      continue;
+    }
+
+    // Lignes de liste (-, •, ✓, *)
+    const li = l.match(/^[\-•✓\*]\s+(.+)/);
+    if (li) {
+      if (!inList) { out.push('<ul style="padding-left:17px;margin:6px 0;color:var(--text2)">'); inList = true; }
+      out.push('<li style="margin:3px 0">' + inlineFormat(li[1]) + '</li>');
+      continue;
+    }
+
+    // Lignes de tableau markdown (|...|)
+    if (l.trim().startsWith('|')) {
+      if (inList) { out.push('</ul>'); inList = false; }
+      // Ignorer les lignes séparateurs |---|
+      if (/^\|[-:\s|]+\|$/.test(l.trim())) continue;
+      const cells = l.trim().replace(/^\||\|$/g,'').split('|').map(c => c.trim());
+      const isHeader = lines[i+1] && /^\|[-:\s|]+\|$/.test(lines[i+1].trim());
+      const tag = isHeader ? 'th' : 'td';
+      const style = isHeader
+        ? 'style="background:var(--bg4);color:var(--text);font-weight:600;padding:6px 10px;border:1px solid var(--border2)"'
+        : 'style="color:var(--text2);padding:6px 10px;border:1px solid var(--border)"';
+      if (isHeader) {
+        out.push(`<table style="width:100%;border-collapse:collapse;margin:8px 0;font-size:13px"><tr>${cells.map(c=>`<${tag} ${style}>${inlineFormat(c)}</${tag}>`).join('')}</tr>`);
+      } else {
+        // Vérifier si c'est la dernière ligne du tableau
+        const nextIsTable = lines[i+1] && lines[i+1].trim().startsWith('|');
+        const row = `<tr>${cells.map(c=>`<${tag} ${style}>${inlineFormat(c)}</${tag}>`).join('')}</tr>`;
+        out.push(row);
+        if (!nextIsTable) out.push('</table>');
+      }
+      continue;
+    }
+
+    // Boîtes spéciales (emoji en début de ligne)
+    const emojiBox = l.match(/^(💡|📌|✅|⚠️)(.*)/);
+    if (emojiBox) {
+      if (inList) { out.push('</ul>'); inList = false; }
+      const cls = {'💡':'highlight-box','📌':'highlight-box','✅':'info-box','⚠️':'warn-box'}[emojiBox[1]];
+      out.push(`<div class="${cls}">${emojiBox[1]}${inlineFormat(emojiBox[2])}</div>`);
+      continue;
+    }
+
+    // Paragraphe normal
+    if (inList) { out.push('</ul>'); inList = false; }
+    out.push('<p>' + inlineFormat(l) + '</p>');
+  }
+
+  if (inList) out.push('</ul>');
+  return out.join('');
+}
+
+function inlineFormat(text) {
+  // Échapper le HTML sauf les balises déjà injectées
+  return text
+    .replace(/&(?![a-z#0-9]+;)/g, '&amp;')
+    .replace(/```[\s\S]*?```/g, '') // déjà traité en amont
+    .replace(/`([^`]+)`/g, '<code style="background:var(--bg4);padding:2px 5px;border-radius:4px;font-size:12.5px;color:var(--teal)">$1</code>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em style="color:var(--accent2);font-style:normal">$1</em>');
+}
+
+function escapeHtml(t) {
+  return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// ─────────────────────────────────────────────
+// UI
+// ─────────────────────────────────────────────
+function switchTab(tab, el) {
+  closeSidebar();
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + tab).classList.add('active');
+  document.getElementById('tab-' + tab).classList.add('active');
+}
+
+function cyclePhase() {
+  state.phaseIdx = (state.phaseIdx + 1) % PHASES.length;
+  document.getElementById('phase-label').textContent = PHASES[state.phaseIdx];
+  showToast('🎯 Niveau : ' + PHASES[state.phaseIdx]);
+}
+
+function changeModel(id) {
+  state.selectedModel = id;
+  showToast('🤖 Modèle : ' + (id.split('/')[1]?.split(':')[0] || id));
+}
+
+function newSession() {
+  state.messages = [];
+  state.stats = { questions: 0, quizScore: [], etape: '—' };
+  state.activeModule = null;
+  state.activeParcours = null;
+  document.querySelectorAll('.parcours-item').forEach(p => p.classList.remove('active'));
+  updateStats();
+  updateProgressBars();
+  document.getElementById('progress-pct').textContent = '0%';
+  document.getElementById('sp-fill').style.width = '0%';
+  state.progress = 0;
+  document.getElementById('chat-messages').innerHTML = `
+    <div class="welcome" id="welcome-screen">
+      <div class="welcome-icon">🎓</div>
+      <h2>Nouvelle session démarrée !</h2>
+      <p>Sélectionnez un rôle ou une étape du parcours pour commencer.</p>
+      <div class="welcome-cards">
+        <div class="wcard" onclick="setRole('integration',document.getElementById('role-integration'))">🤝 Guide d'intégration</div>
+        <div class="wcard" onclick="setRole('orientation',document.getElementById('role-orientation'))">🧭 Conseiller orientation</div>
+        <div class="wcard" onclick="setRole('academique',document.getElementById('role-academique'))">📚 Assistant académique</div>
+        <div class="wcard" onclick="setRole('pro',document.getElementById('role-pro'))">💼 Guide professionnel</div>
+      </div>
+    </div>`;
+  showToast('✨ Nouvelle session démarrée');
+}
+
+async function checkServer() {
+  const pill  = document.getElementById('server-pill');
+  const label = document.getElementById('slabel');
+  try {
+    const r = await fetch('http://localhost:3000/api/health');
+    const d = await r.json();
+
+    if (d.status === 'ok' && d.keySet) {
+      pill.className = 'ok';
+      label.textContent = `Connecté · ${d.modulesWithContent}/${d.modulesCount} modules · ${(d.knowledgeTotalChars/1000).toFixed(0)}k caractères`;
+      // Charger et afficher les modules disponibles depuis le serveur
+      loadServerModules();
+      // Cacher après 8s
+      setTimeout(() => { pill.style.display = 'none'; }, 8000);
+    } else if (d.status === 'ok' && !d.keySet) {
+      pill.className = 'err';
+      label.textContent = '⚠ Clé API manquante dans .env';
+    } else {
+      pill.className = 'err';
+      label.textContent = 'Erreur serveur';
+    }
+  } catch {
+    pill.className = 'err';
+    label.textContent = '⚠ Serveur hors ligne — lancez : node server.js';
+  }
+}
+
+async function loadServerModules() {
+  try {
+    const r = await fetch('http://localhost:3000/api/modules');
+    const d = await r.json();
+
+    // Badges sur les cartes modules
+    d.modules.forEach(m => {
+      const btn = document.getElementById('module-btn-' + m.id);
+      if (btn) {
+        const existing = btn.querySelector('.mod-server-badge');
+        if (existing) existing.remove();
+        const b = document.createElement('span');
+        b.className = 'mod-server-badge';
+        b.style.cssText = `font-size:9px;padding:1px 6px;border-radius:6px;margin-top:8px;display:inline-block;font-family:var(--font-head);font-weight:700;letter-spacing:.5px;`;
+        b.style.background = m.available ? 'rgba(30,200,160,0.18)' : 'rgba(240,96,96,0.15)';
+        b.style.color      = m.available ? 'var(--teal)' : 'var(--coral)';
+        b.textContent      = m.available ? `✓ ${(m.size/1000).toFixed(1)}k chars` : '⚠ Fichier vide';
+        btn.appendChild(b);
+      }
+    });
+
+    // Statut global dans stats
+    const loaded = d.modules.filter(m => m.available).length;
+    const statusRow = document.getElementById('kb-status-row');
+    if (statusRow) {
+      statusRow.innerHTML = `<strong style="color:var(--teal)">${loaded}/${d.modules.length} modules chargés</strong> — ${(d.totalChars/1000).toFixed(0)}k caractères de contenu disponible pour l'IA.`;
+    }
+
+    // Liste détaillée des fichiers
+    const filesList = document.getElementById('kb-files-list');
+    if (filesList) {
+      const masterRow = `
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:var(--bg3);border-radius:8px;border:1px solid var(--border2);">
+          <span style="font-size:14px">${d.masterAvailable ? '✅' : '⚠️'}</span>
+          <span style="font-size:12.5px;flex:1;color:var(--text2);font-weight:500;">master_ifdl.yaml</span>
+          <span style="font-size:11px;color:var(--text3);">Infos générales du Master</span>
+          <span style="font-size:10px;padding:1px 7px;border-radius:6px;background:${d.masterAvailable ? 'rgba(30,200,160,0.15)' : 'rgba(240,96,96,0.12)'};color:${d.masterAvailable ? 'var(--teal)' : 'var(--coral)'}">${d.masterAvailable ? 'chargé' : 'vide'}</span>
+        </div>`;
+      const moduleRows = d.modules.map(m => `
+        <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:var(--bg3);border-radius:8px;border:1px solid var(--border2);">
+          <span style="font-size:14px">${m.available ? '✅' : '⚠️'}</span>
+          <span style="font-size:12px;flex:1;color:var(--text2);font-family:'Courier New',monospace;">${m.filename}</span>
+          <span style="font-size:11px;color:var(--text3);">${(m.size/1000).toFixed(1)}k chars</span>
+          <span style="font-size:10px;padding:1px 7px;border-radius:6px;background:${m.available ? 'rgba(30,200,160,0.15)' : 'rgba(240,96,96,0.12)'};color:${m.available ? 'var(--teal)' : 'var(--coral)'}">${m.available ? 'chargé' : 'vide'}</span>
+        </div>`).join('');
+      filesList.innerHTML = masterRow + moduleRows;
+    }
+  } catch (e) {
+    const statusRow = document.getElementById('kb-status-row');
+    if (statusRow) statusRow.textContent = '⚠ Impossible de contacter le serveur pour lire les fichiers.';
+  }
+}
+
+function handleKey(e) { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();} }
+function autoResize(el) { el.style.height='auto'; el.style.height=Math.min(el.scrollHeight,110)+'px'; }
+function showToast(msg) { const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';setTimeout(()=>{t.style.display='none';},3000); }
+
+// ═══════════════════════════════════════════════════════════
+//  SIDEBAR MOBILE TOGGLE
+// ═══════════════════════════════════════════════════════════
+function toggleSidebar() {
+  const isOpen = document.body.classList.toggle('sidebar-open');
+  const btn = document.getElementById('hamburger-btn');
+  if (btn) btn.setAttribute('aria-expanded', isOpen);
+  // Close sidebar when a nav item is clicked on mobile
+  if (isOpen) {
+    document.querySelectorAll('.role-item,.parcours-item,.sidebar-scroll .s-label').forEach(el => {
+      el.addEventListener('click', closeSidebar, { once: true });
+    });
+  }
+}
+
+function closeSidebar() {
+  document.body.classList.remove('sidebar-open');
+  const btn = document.getElementById('hamburger-btn');
+  if (btn) btn.setAttribute('aria-expanded', 'false');
+}
+
+// Close sidebar on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeSidebar();
+});
+
+// Close sidebar on tab switch handled inside switchTab directly
+
+// ═══════════════════════════════════════════════════════════
+//  DARK / LIGHT MODE TOGGLE
+// ═══════════════════════════════════════════════════════════
+function toggleTheme() {
+  const body = document.body;
+  const btn = document.getElementById('theme-toggle');
+  const isLight = body.classList.toggle('light-mode');
+  btn.textContent = isLight ? '☀️' : '🌙';
+  btn.title = isLight ? 'Passer en mode sombre' : 'Passer en mode clair';
+  localStorage.setItem('ifdl-theme', isLight ? 'light' : 'dark');
+}
+
+// Restore saved theme
+(function() {
+  const saved = localStorage.getItem('ifdl-theme');
+  if (saved === 'light') {
+    document.body.classList.add('light-mode');
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('theme-toggle');
+      if (btn) { btn.textContent = '☀️'; btn.title = 'Passer en mode sombre'; }
+    });
+  }
+})();
+
+// ═══════════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════════════
+let voiceRecognition = null;
+let isRecording = false;
+
+function initVoiceRecognition() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) return null;
+
+  const rec = new SpeechRecognition();
+  rec.lang = 'fr-FR';
+  rec.continuous = false;
+  rec.interimResults = true;
+  rec.maxAlternatives = 1;
+
+  const input = document.getElementById('chat-input');
+  const statusEl = document.getElementById('voice-status');
+
+  rec.onstart = () => {
+    isRecording = true;
+    const btn = document.getElementById('voice-btn');
+    btn.classList.add('recording');
+    btn.title = 'Cliquez pour arrêter';
+    statusEl.style.display = 'flex';
+    statusEl.innerHTML = '<div class="vs-dot"></div><span>En écoute… parlez maintenant</span>';
+  };
+
+  rec.onresult = (e) => {
+    let interim = '', final = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      const t = e.results[i][0].transcript;
+      if (e.results[i].isFinal) final += t;
+      else interim += t;
+    }
+    input.value = final || interim;
+    autoResize(input);
+    if (final) {
+      statusEl.innerHTML = `<span style="color:var(--teal)">✓ Transcrit : "${final.slice(0,60)}${final.length>60?'…':''}"</span>`;
+    }
+  };
+
+  rec.onerror = (e) => {
+    stopVoiceRecording();
+    const msgs = {
+      'not-allowed': '🎙️ Accès au micro refusé. Autorisez le microphone dans votre navigateur.',
+      'no-speech': '🎙️ Aucune parole détectée. Réessayez.',
+      'network': '🎙️ Erreur réseau. Vérifiez votre connexion.',
+    };
+    statusEl.style.display = 'flex';
+    statusEl.innerHTML = `<span style="color:var(--coral)">${msgs[e.error] || '🎙️ Erreur micro : ' + e.error}</span>`;
+    setTimeout(() => { statusEl.style.display = 'none'; }, 4000);
+  };
+
+  rec.onend = () => {
+    stopVoiceRecording();
+    const text = input.value.trim();
+    if (text) {
+      setTimeout(() => { statusEl.style.display = 'none'; }, 2000);
+    } else {
+      statusEl.style.display = 'none';
+    }
+  };
+
+  return rec;
+}
+
+function stopVoiceRecording() {
+  isRecording = false;
+  const btn = document.getElementById('voice-btn');
+  if (btn) { btn.classList.remove('recording'); btn.title = 'Message vocal'; }
+}
+
+function toggleVoiceInput() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) {
+    showToast('⚠️ Votre navigateur ne supporte pas la reconnaissance vocale. Essayez Chrome ou Edge.');
+    return;
+  }
+
+  if (isRecording) {
+    if (voiceRecognition) voiceRecognition.stop();
+    return;
+  }
+
+  voiceRecognition = initVoiceRecognition();
+  if (voiceRecognition) {
+    try { voiceRecognition.start(); }
+    catch(e) { showToast('🎙️ Impossible de démarrer le micro : ' + e.message); }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+//  VOICE OUTPUT — Synthèse vocale (Web Speech API)
+// ═══════════════════════════════════════════════════════════
+let isSpeaking = false;
+let currentSpeechText = '';
+
+function speakText(text) {
+  if (!window.speechSynthesis) { showToast('Synthèse vocale non supportée.'); return; }
+
+  // Nettoyer le markdown pour la lecture
+  const clean = text
+    .replace(/```[\s\S]*?```/g, 'bloc de code')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/\*(.+?)\*/g, '$1')
+    .replace(/#{1,6}\s/g, '')
+    .replace(/\[(.+?)\]\(.+?\)/g, '$1')
+    .replace(/---+/g, '')
+    .trim()
+    .slice(0, 1000);
+
+  if (isSpeaking && currentSpeechText === clean) {
+    window.speechSynthesis.cancel();
+    isSpeaking = false;
+    currentSpeechText = '';
+    return;
+  }
+
+  window.speechSynthesis.cancel();
+  const utter = new SpeechSynthesisUtterance(clean);
+  utter.lang = 'fr-FR';
+  utter.rate = 1.05;
+  utter.pitch = 1;
+
+  // Chercher une voix française
+  const voices = window.speechSynthesis.getVoices();
+  const frVoice = voices.find(v => v.lang.startsWith('fr'));
+  if (frVoice) utter.voice = frVoice;
+
+  utter.onstart = () => { isSpeaking = true; currentSpeechText = clean; };
+  utter.onend = () => { isSpeaking = false; currentSpeechText = ''; };
+  utter.onerror = () => { isSpeaking = false; currentSpeechText = ''; };
+
+  window.speechSynthesis.speak(utter);
+}
+
+// Délégation : clic sur .tts-btn dans les messages
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('chat-messages').addEventListener('click', (e) => {
+    const btn = e.target.closest('.tts-btn');
+    if (!btn) return;
+    const text = btn.dataset.text || '';
+    speakText(text);
+    setTimeout(() => btn.classList.toggle('tts-active', isSpeaking), 50);
+  });
+});
+
+init();
+</script>
+</body>
+</html>
