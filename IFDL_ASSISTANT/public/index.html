@@ -443,7 +443,7 @@ const PHASES = ['Nouveau','En cours','Avancé','Expert'];
 // ─────────────────────────────────────────────
 // ÉTAT GLOBAL
 // ─────────────────────────────────────────────
-const API_URL = 'http://localhost:3000/api/chat';
+const API_URL = '/api/chat';
 
 let state = {
   messages:       [],
@@ -490,7 +490,7 @@ async function renderModuleGrid() {
   </div>`;
 
   try {
-    const r = await fetch('http://localhost:3000/api/modules');
+    const r = await fetch('/api/modules');
     const d = await r.json();
 
     // 2. Filtrer uniquement les modules disponibles (fichier YAML non vide)
@@ -1084,7 +1084,7 @@ async function checkServer() {
   const pill  = document.getElementById('server-pill');
   const label = document.getElementById('slabel');
   try {
-    const r = await fetch('http://localhost:3000/api/health');
+    const r = await fetch('/api/health');
     const d = await r.json();
 
     if (d.status === 'ok' && d.keySet) {
@@ -1109,7 +1109,7 @@ async function checkServer() {
 
 async function loadServerModules() {
   try {
-    const r = await fetch('http://localhost:3000/api/modules');
+    const r = await fetch('/api/modules');
     const d = await r.json();
 
     // Badges sur les cartes modules
