@@ -261,10 +261,14 @@ app.post('/api/chat', async (req, res) => {
     : kb.all;
 
   const SEP = '═'.repeat(60);
-  const enrichedSystem = system
-    ? `${system}\n\n${SEP}\nBASE DE CONNAISSANCES OFFICIELLE DU MASTER IFDL\nUtilisez EXCLUSIVEMENT ces informations pour répondre aux questions.\n${SEP}\n${knowledgeContext}`
-    : `Tu es l'assistant pédagogique officiel du Master IFDL. Base-toi UNIQUEMENT sur la base de connaissances ci-dessous pour répondre. Ne génère pas d'informations inventées.\n\n${knowledgeContext}`;
+ // const enrichedSystem = system
+ //   ? `${system}\n\n${SEP}\nBASE DE CONNAISSANCES OFFICIELLE DU MASTER IFDL\nUtilisez EXCLUSIVEMENT ces informations pour répondre aux questions.\n${SEP}\n${knowledgeContext}`
+ //   : `Tu es l'assistant pédagogique officiel du Master IFDL. Base-toi UNIQUEMENT sur la base de connaissances ci-dessous pour répondre. Ne génère pas d'informations inventées.\n\n${knowledgeContext}`;
+const SCOPE_GUARD = `\n\n${SEP}\nRESTRICTION DE PÉRIMÈTRE — RÈGLE ABSOLUE\n${SEP}\nTu réponds UNIQUEMENT aux questions en lien avec :\n- le Master IFDL (programme, modules, organisation, vie étudiante)\n- le contexte professionnel et académique de la formation (cours, exercices, méthodologie, débouchés, PFE)\n- le contenu de la base de connaissances fournie ci-dessus\n\nSi une question sort de ce périmètre (culture générale, actualité, sujets personnels sans lien, autres formations, etc.), réponds poliment que tu es spécialisé sur le Master IFDL et propose de recentrer la discussion sur la formation. Ne donne AUCUNE réponse hors de ce cadre, même partielle.`;
 
+const enrichedSystem = system
+    ? `${system}\n\n${SEP}\nBASE DE CONNAISSANCES OFFICIELLE DU MASTER IFDL\nUtilisez EXCLUSIVEMENT ces informations pour répondre aux questions.\n${SEP}\n${knowledgeContext}${SCOPE_GUARD}`
+    : `Tu es l'assistant pédagogique officiel du Master IFDL. Base-toi UNIQUEMENT sur la base de connaissances ci-dessous pour répondre. Ne génère pas d'informations inventées.\n\n${knowledgeContext}${SCOPE_GUARD}`;
   try {
     const response = await client.chat.completions.create({
       model: selectedModel,
