@@ -252,7 +252,7 @@ app.post('/api/chat', async (req, res) => {
   if (!messages || !Array.isArray(messages) || messages.length === 0)
     return res.status(400).json({ error: 'Le champ "messages" est requis.' });
 
-  const selectedModel = model || process.env.AI_MODEL || 'mistralai/mistral-7b-instruct:free';
+  const selectedModel = model || process.env.AI_MODEL || 'nvidia/nemotron-super-49b-v1:free';
   const kb = loadKnowledge();
 
   // Contexte adapté : module spécifique ou base complète
@@ -362,7 +362,7 @@ app.get('/api/health', (_req, res) => {
   res.json({
     status:              'ok',
     provider:            'OpenRouter',
-    model:               process.env.AI_MODEL || 'mistralai/mistral-7b-instruct:free',
+    model:               process.env.AI_MODEL || 'nvidia/nemotron-super-49b-v1:free',
     keySet:              !!process.env.OPENROUTER_API_KEY,
     masterFile:          fs.existsSync(MASTER_FILE),
     modulesCount:        Object.keys(kb.modules).length,
@@ -380,7 +380,7 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n🎓 IFDL Assistant`);
   console.log('━'.repeat(52));
   console.log(`✅  URL      : http://localhost:${PORT}`);
-  console.log(`🤖  Modèle  : ${process.env.AI_MODEL || 'mistralai/mistral-7b-instruct:free'}`);
+  console.log(`🤖  Modèle  : ${process.env.AI_MODEL || 'nvidia/nemotron-super-49b-v1:free'}`);
   console.log(`🔑  Clé API : ${process.env.OPENROUTER_API_KEY ? '✓ configurée' : '✗ MANQUANTE dans .env'}`);
   console.log('─'.repeat(52));
   console.log('📁  Base de connaissances :');
