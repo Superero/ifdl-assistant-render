@@ -247,7 +247,7 @@ function loadKnowledge() {
 //  ROUTE — CHAT PRINCIPAL
 // ═══════════════════════════════════════════════════════════
 app.post('/api/chat', async (req, res) => {
-  const { messages, system, max_tokens = 1400, model, moduleId } = req.body;
+  const { messages, system, max_tokens = 2500, model, moduleId } = req.body;
 
   if (!messages || !Array.isArray(messages) || messages.length === 0)
     return res.status(400).json({ error: 'Le champ "messages" est requis.' });
