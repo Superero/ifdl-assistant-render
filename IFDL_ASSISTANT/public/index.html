@@ -131,13 +131,13 @@
       <div class="s-label" style="margin-top:10px">Modèle IA</div>
       <select class="model-select" id="model-select" onchange="changeModel(this.value)">
         <optgroup label="✅ Gratuits">
-          <option value="mistralai/mistral-7b-instruct:free">Mistral 7B (gratuit)</option>
-          <option value="meta-llama/llama-3-8b-instruct:free">Llama 3 8B (gratuit)</option>
-          <option value="meta-llama/llama-3.1-8b-instruct:free">Llama 3.1 8B (gratuit)</option>
+          <!-- <option value="mistralai/mistral-7b-instruct:free">Mistral 7B (gratuit)</option> -->
+          <!-- <option value="meta-llama/llama-3-8b-instruct:free">Llama 3 8B (gratuit)</option> -->
+          <!-- <option value="meta-llama/llama-3.1-8b-instruct:free">Llama 3.1 8B (gratuit)</option> -->
           <option value="google/gemma-3-12b-it:free">Gemma 3 12B (gratuit)</option>
           <option value="qwen/qwen-2-7b-instruct:free">Qwen 2 7B (gratuit)</option>
           <option value="stepfun-ai/step-3.5-flash">stepfun-ai/step-3.5-flash (gratuit)</option>
-          <option value="nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free">nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free</option>
+          <option value="nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free" selected>nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free</option>
         </optgroup>
         <optgroup label="💎 Premium">
           <option value="anthropic/claude-sonnet-4-5">Claude Sonnet 4.5</option>
@@ -451,7 +451,8 @@ let state = {
   activeModule:   null,
   activeParcours: null,
   phaseIdx:       0,
-  selectedModel:  'mistralai/mistral-7b-instruct:free',
+  // selectedModel:  'mistralai/mistral-7b-instruct:free',
+  selectedModel:  'nvidia/nemotron-super-49b-v1:free',
   stats:          { questions: 0, quizScore: [], etape: '—' },
   isLoading:      false,
   quizAnswered:   0,
