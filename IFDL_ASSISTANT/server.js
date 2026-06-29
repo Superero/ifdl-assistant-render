@@ -252,7 +252,7 @@ app.post('/api/chat', async (req, res) => {
   if (!messages || !Array.isArray(messages) || messages.length === 0)
     return res.status(400).json({ error: 'Le champ "messages" est requis.' });
 
-  const selectedModel = model || process.env.AI_MODEL || 'nvidia/nemotron-super-49b-v1:free';
+  const selectedModel = model || process.env.AI_MODEL || 'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free';
   const kb = loadKnowledge();
 
   // Contexte adapté : module spécifique ou base complète
@@ -362,7 +362,7 @@ app.get('/api/health', (_req, res) => {
   res.json({
     status:              'ok',
     provider:            'OpenRouter',
-    model:               process.env.AI_MODEL || 'nvidia/nemotron-super-49b-v1:free',
+    model:               process.env.AI_MODEL || 'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free',
     keySet:              !!process.env.OPENROUTER_API_KEY,
     masterFile:          fs.existsSync(MASTER_FILE),
     modulesCount:        Object.keys(kb.modules).length,
