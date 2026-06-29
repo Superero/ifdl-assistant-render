@@ -710,8 +710,8 @@ async function callAI(messages, customSystem = null) {
   const body = {
     system:     customSystem || buildSystemPrompt(),
     messages,
-    max_tokens: 1400,
-    model:      state.selectedModel,
+    max_tokens: 2500,
+    model:      state.selectedModel || 'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free',
   };
   // Transmettre l'ID du module actif au serveur
   // → il chargera uniquement ce fichier .yaml
@@ -727,6 +727,8 @@ async function callAI(messages, customSystem = null) {
     throw new Error(err.error || `HTTP ${res.status}`);
   }
   const data = await res.json();
+  // return data.content;
+  if (!data.content) throw new Error(data.error || 'Réponse vide du serveur');
   return data.content;
 }
 
