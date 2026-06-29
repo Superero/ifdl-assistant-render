@@ -380,7 +380,7 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n🎓 IFDL Assistant`);
   console.log('━'.repeat(52));
   console.log(`✅  URL      : http://localhost:${PORT}`);
-  console.log(`🤖  Modèle  : ${process.env.AI_MODEL || 'nvidia/nemotron-super-49b-v1:free'}`);
+  console.log(`🤖  Modèle  : ${process.env.AI_MODEL || 'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free'}`);
   console.log(`🔑  Clé API : ${process.env.OPENROUTER_API_KEY ? '✓ configurée' : '✗ MANQUANTE dans .env'}`);
   console.log('─'.repeat(52));
   console.log('📁  Base de connaissances :');
